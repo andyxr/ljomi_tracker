@@ -1,0 +1,26 @@
+{
+  "slug": "TapeJam",
+  "name": "Tape Jam",
+  "version": "2.0.0",
+  "license": "proprietary",
+  "brand": "Tape Jam",
+  "author": "",
+  "authorEmail": "",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "TapeJam",
+      "name": "Tape Jam",
+      "description": "Six-lane stem player with Flux-mode DJ effects",
+      "tags": [
+        "Sampler",
+        "Effect"
+      ]
+    }
+  ]
+}

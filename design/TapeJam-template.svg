@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="193.04mm" height="128.5mm" viewBox="0 0 193.04 128.5">
+<sodipodi:namedview id="namedview" inkscape:document-units="mm" pagecolor="#505050" inkscape:pagecheckerboard="false"/>
+<g id="artwork" inkscape:groupmode="layer" inkscape:label="Artwork">
+<rect x="0" y="0" width="193.04" height="128.5" fill="#1b1d22"/>
+<rect x="0" y="0" width="193.04" height="15" fill="#14161a"/>
+<rect x="0" y="0" width="193.04" height="1.2" fill="#e0703a"/>
+<rect x="0" y="15" width="193.04" height="14" fill="#23262d"/>
+<rect x="69" y="16" width="60" height="12" rx="1.5" fill="#2b2f37"/>
+<rect x="165.5" y="16" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="30" width="193.04" height="14" fill="#1f2127"/>
+<rect x="69" y="31" width="60" height="12" rx="1.5" fill="#2b2f37"/>
+<rect x="165.5" y="31" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="45" width="193.04" height="14" fill="#23262d"/>
+<rect x="69" y="46" width="60" height="12" rx="1.5" fill="#2b2f37"/>
+<rect x="165.5" y="46" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="60" width="193.04" height="14" fill="#1f2127"/>
+<rect x="69" y="61" width="60" height="12" rx="1.5" fill="#2b2f37"/>
+<rect x="165.5" y="61" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="75" width="193.04" height="14" fill="#23262d"/>
+<rect x="69" y="76" width="60" height="12" rx="1.5" fill="#2b2f37"/>
+<rect x="165.5" y="76" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="90" width="193.04" height="14" fill="#1f2127"/>
+<rect x="69" y="91" width="60" height="12" rx="1.5" fill="#2b2f37"/>
+<rect x="165.5" y="91" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="106.5" width="193.04" height="22" fill="#14161a"/>
+<rect x="0" y="106.5" width="193.04" height="0.4" fill="#e0703a"/>
+<rect x="116.5" y="114.5" width="11" height="11" rx="1.5" fill="#33302b"/>
+</g>
+<g id="guides" inkscape:groupmode="layer" inkscape:label="GUIDES - hide before saving to res" sodipodi:insensitive="true">
+<line x1="0" y1="0" x2="0" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="5.08" y1="0" x2="5.08" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="10.16" y1="0" x2="10.16" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="15.24" y1="0" x2="15.24" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="20.32" y1="0" x2="20.32" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="25.4" y1="0" x2="25.4" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="30.48" y1="0" x2="30.48" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="35.56" y1="0" x2="35.56" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="40.64" y1="0" x2="40.64" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="45.72" y1="0" x2="45.72" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="50.8" y1="0" x2="50.8" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="55.88" y1="0" x2="55.88" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="60.96" y1="0" x2="60.96" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="66.04" y1="0" x2="66.04" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="71.12" y1="0" x2="71.12" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="76.2" y1="0" x2="76.2" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="81.28" y1="0" x2="81.28" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="86.36" y1="0" x2="86.36" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="91.44" y1="0" x2="91.44" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="96.52" y1="0" x2="96.52" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="101.6" y1="0" x2="101.6" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="106.68" y1="0" x2="106.68" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="111.76" y1="0" x2="111.76" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="116.84" y1="0" x2="116.84" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="121.92" y1="0" x2="121.92" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="127" y1="0" x2="127" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="132.08" y1="0" x2="132.08" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="137.16" y1="0" x2="137.16" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="142.24" y1="0" x2="142.24" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="147.32" y1="0" x2="147.32" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="152.4" y1="0" x2="152.4" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="157.48" y1="0" x2="157.48" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="162.56" y1="0" x2="162.56" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="167.64" y1="0" x2="167.64" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="172.72" y1="0" x2="172.72" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="177.8" y1="0" x2="177.8" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="182.88" y1="0" x2="182.88" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="187.96" y1="0" x2="187.96" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="193.04" y1="0" x2="193.04" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<rect x="0.3" y="15" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="30" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="45" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="60" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="75" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="90" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="8" y="16.5" width="58" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="37" y="22.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 1 display (opaque, drawn by code)</text>
+<rect x="8" y="31.5" width="58" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="37" y="37.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 2 display (opaque, drawn by code)</text>
+<rect x="8" y="46.5" width="58" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="37" y="52.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 3 display (opaque, drawn by code)</text>
+<rect x="8" y="61.5" width="58" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="37" y="67.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 4 display (opaque, drawn by code)</text>
+<rect x="8" y="76.5" width="58" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="37" y="82.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 5 display (opaque, drawn by code)</text>
+<rect x="8" y="91.5" width="58" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="37" y="97.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 6 display (opaque, drawn by code)</text>
+<rect x="131" y="108" width="58" height="14" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="160" y="115.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">transport display (opaque, drawn by code)</text>
+<circle cx="74" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="74" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M73,22H75M74,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="74" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 ROLL in</text>
+<circle cx="81.5" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="81.5" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M80.5,22H82.5M81.5,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="81.5" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 ROLL</text>
+<circle cx="89" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="89" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M88,22H90M89,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="89" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 REV in</text>
+<circle cx="96.5" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="96.5" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M95.5,22H97.5M96.5,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="96.5" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 REV</text>
+<circle cx="104" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="104" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M103,22H105M104,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="104" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 STOP in</text>
+<circle cx="111.5" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="111.5" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M110.5,22H112.5M111.5,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="111.5" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 STOP</text>
+<circle cx="119" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="119" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M118,22H120M119,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="119" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 STUT in</text>
+<circle cx="126.5" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="126.5" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M125.5,22H127.5M126.5,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="126.5" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 STUT</text>
+<circle cx="136" cy="22" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="136" cy="22" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M135,22H137M136,21V23" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="136" y="28.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">1 LEN</text>
+<circle cx="147" cy="22" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="147" cy="22" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M146,22H148M147,21V23" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="147" y="28.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">1 LVL</text>
+<circle cx="158" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="158" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M157,22H159M158,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="158" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 MUTE</text>
+<circle cx="171" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="171" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M170,22H172M171,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="171" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 L out</text>
+<circle cx="183" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="183" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M182,22H184M183,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="183" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 R out</text>
+<circle cx="74" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="74" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M73,37H75M74,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="74" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 ROLL in</text>
+<circle cx="81.5" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="81.5" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M80.5,37H82.5M81.5,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="81.5" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 ROLL</text>
+<circle cx="89" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="89" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M88,37H90M89,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="89" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 REV in</text>
+<circle cx="96.5" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="96.5" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M95.5,37H97.5M96.5,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="96.5" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 REV</text>
+<circle cx="104" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="104" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M103,37H105M104,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="104" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 STOP in</text>
+<circle cx="111.5" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="111.5" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M110.5,37H112.5M111.5,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="111.5" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 STOP</text>
+<circle cx="119" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="119" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M118,37H120M119,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="119" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 STUT in</text>
+<circle cx="126.5" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="126.5" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M125.5,37H127.5M126.5,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="126.5" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 STUT</text>
+<circle cx="136" cy="37" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="136" cy="37" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M135,37H137M136,36V38" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="136" y="43.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">2 LEN</text>
+<circle cx="147" cy="37" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="147" cy="37" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M146,37H148M147,36V38" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="147" y="43.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">2 LVL</text>
+<circle cx="158" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="158" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M157,37H159M158,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="158" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 MUTE</text>
+<circle cx="171" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="171" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M170,37H172M171,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="171" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 L out</text>
+<circle cx="183" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="183" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M182,37H184M183,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="183" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 R out</text>
+<circle cx="74" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="74" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M73,52H75M74,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="74" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 ROLL in</text>
+<circle cx="81.5" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="81.5" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M80.5,52H82.5M81.5,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="81.5" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 ROLL</text>
+<circle cx="89" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="89" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M88,52H90M89,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="89" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 REV in</text>
+<circle cx="96.5" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="96.5" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M95.5,52H97.5M96.5,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="96.5" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 REV</text>
+<circle cx="104" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="104" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M103,52H105M104,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="104" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 STOP in</text>
+<circle cx="111.5" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="111.5" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M110.5,52H112.5M111.5,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="111.5" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 STOP</text>
+<circle cx="119" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="119" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M118,52H120M119,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="119" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 STUT in</text>
+<circle cx="126.5" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="126.5" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M125.5,52H127.5M126.5,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="126.5" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 STUT</text>
+<circle cx="136" cy="52" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="136" cy="52" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M135,52H137M136,51V53" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="136" y="58.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">3 LEN</text>
+<circle cx="147" cy="52" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="147" cy="52" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M146,52H148M147,51V53" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="147" y="58.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">3 LVL</text>
+<circle cx="158" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="158" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M157,52H159M158,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="158" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 MUTE</text>
+<circle cx="171" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="171" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M170,52H172M171,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="171" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 L out</text>
+<circle cx="183" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="183" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M182,52H184M183,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="183" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 R out</text>
+<circle cx="74" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="74" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M73,67H75M74,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="74" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 ROLL in</text>
+<circle cx="81.5" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="81.5" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M80.5,67H82.5M81.5,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="81.5" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 ROLL</text>
+<circle cx="89" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="89" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M88,67H90M89,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="89" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 REV in</text>
+<circle cx="96.5" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="96.5" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M95.5,67H97.5M96.5,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="96.5" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 REV</text>
+<circle cx="104" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="104" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M103,67H105M104,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="104" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 STOP in</text>
+<circle cx="111.5" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="111.5" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M110.5,67H112.5M111.5,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="111.5" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 STOP</text>
+<circle cx="119" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="119" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M118,67H120M119,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="119" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 STUT in</text>
+<circle cx="126.5" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="126.5" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M125.5,67H127.5M126.5,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="126.5" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 STUT</text>
+<circle cx="136" cy="67" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="136" cy="67" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M135,67H137M136,66V68" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="136" y="73.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">4 LEN</text>
+<circle cx="147" cy="67" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="147" cy="67" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M146,67H148M147,66V68" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="147" y="73.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">4 LVL</text>
+<circle cx="158" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="158" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M157,67H159M158,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="158" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 MUTE</text>
+<circle cx="171" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="171" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M170,67H172M171,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="171" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 L out</text>
+<circle cx="183" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="183" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M182,67H184M183,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="183" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 R out</text>
+<circle cx="74" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="74" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M73,82H75M74,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="74" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 ROLL in</text>
+<circle cx="81.5" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="81.5" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M80.5,82H82.5M81.5,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="81.5" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 ROLL</text>
+<circle cx="89" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="89" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M88,82H90M89,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="89" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 REV in</text>
+<circle cx="96.5" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="96.5" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M95.5,82H97.5M96.5,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="96.5" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 REV</text>
+<circle cx="104" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="104" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M103,82H105M104,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="104" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 STOP in</text>
+<circle cx="111.5" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="111.5" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M110.5,82H112.5M111.5,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="111.5" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 STOP</text>
+<circle cx="119" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="119" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M118,82H120M119,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="119" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 STUT in</text>
+<circle cx="126.5" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="126.5" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M125.5,82H127.5M126.5,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="126.5" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 STUT</text>
+<circle cx="136" cy="82" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="136" cy="82" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M135,82H137M136,81V83" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="136" y="88.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">5 LEN</text>
+<circle cx="147" cy="82" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="147" cy="82" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M146,82H148M147,81V83" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="147" y="88.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">5 LVL</text>
+<circle cx="158" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="158" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M157,82H159M158,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="158" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 MUTE</text>
+<circle cx="171" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="171" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M170,82H172M171,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="171" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 L out</text>
+<circle cx="183" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="183" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M182,82H184M183,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="183" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 R out</text>
+<circle cx="74" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="74" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M73,97H75M74,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="74" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 ROLL in</text>
+<circle cx="81.5" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="81.5" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M80.5,97H82.5M81.5,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="81.5" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 ROLL</text>
+<circle cx="89" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="89" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M88,97H90M89,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="89" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 REV in</text>
+<circle cx="96.5" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="96.5" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M95.5,97H97.5M96.5,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="96.5" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 REV</text>
+<circle cx="104" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="104" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M103,97H105M104,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="104" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 STOP in</text>
+<circle cx="111.5" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="111.5" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M110.5,97H112.5M111.5,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="111.5" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 STOP</text>
+<circle cx="119" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="119" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M118,97H120M119,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="119" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 STUT in</text>
+<circle cx="126.5" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="126.5" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M125.5,97H127.5M126.5,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="126.5" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 STUT</text>
+<circle cx="136" cy="97" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="136" cy="97" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M135,97H137M136,96V98" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="136" y="103.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">6 LEN</text>
+<circle cx="147" cy="97" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="147" cy="97" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M146,97H148M147,96V98" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="147" y="103.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">6 LVL</text>
+<circle cx="158" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="158" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M157,97H159M158,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="158" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 MUTE</text>
+<circle cx="171" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="171" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M170,97H172M171,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="171" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 L out</text>
+<circle cx="183" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="183" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M182,97H184M183,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="183" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 R out</text>
+<circle cx="10" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="10" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M9,120H11M10,119V121" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="10" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">CLOCK in</text>
+<circle cx="22" cy="120" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="22" cy="120" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M21,120H23M22,119V121" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="22" y="126.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">BPM</text>
+<circle cx="33" cy="120" r="4.025" fill="none" stroke="#a6e35b" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="33" cy="120" r="3.025" fill="#a6e35b" fill-opacity="0.25" stroke="#a6e35b" stroke-width="0.25"/>
+<path d="M32,120H34M33,119V121" stroke="#a6e35b" stroke-width="0.15"/>
+<text x="33" y="125.225" font-family="monospace" font-size="1.4" fill="#a6e35b" text-anchor="middle">OFFSET</text>
+<circle cx="43" cy="120" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="43" cy="120" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M42,120H44M43,119V121" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="43" y="125.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">SYNC</text>
+<circle cx="56" cy="120" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="56" cy="120" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M55,120H57M56,119V121" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="56" y="125.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">PLAY</text>
+<circle cx="65" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="65" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M64,120H66M65,119V121" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="65" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">PLAY in</text>
+<circle cx="78" cy="120" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="78" cy="120" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M77,120H79M78,119V121" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="78" y="125.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">RESET</text>
+<circle cx="87" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="87" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M86,120H88M87,119V121" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="87" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">RESET in</text>
+<circle cx="100" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="100" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M99,120H101M100,119V121" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="100" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">SEEK cv</text>
+<circle cx="110" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="110" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M109,120H111M110,119V121" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="110" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">SEEK trig</text>
+<circle cx="122" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="122" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M121,120H123M122,119V121" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="122" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">POS out</text>
+<text x="5" y="9.6" font-family="monospace" font-size="6" fill="#ffffff" fill-opacity="0.45" text-anchor="start">TAPE JAM</text>
+<text x="46" y="8.725" font-family="monospace" font-size="3.5" fill="#ffffff" fill-opacity="0.45" text-anchor="start">flux stem player</text>
+<text x="77.75" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">ROLL</text>
+<text x="92.75" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">REV</text>
+<text x="107.75" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">STOP</text>
+<text x="122.75" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">STUT</text>
+<text x="136" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">LEN</text>
+<text x="147" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">LVL</text>
+<text x="158" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">MUTE</text>
+<text x="171" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">L</text>
+<text x="183" y="13.62" font-family="monospace" font-size="3.2" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">R</text>
+<text x="4" y="23.365" font-family="monospace" font-size="3.9" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">1</text>
+<text x="4" y="38.365" font-family="monospace" font-size="3.9" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">2</text>
+<text x="4" y="53.365" font-family="monospace" font-size="3.9" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">3</text>
+<text x="4" y="68.365" font-family="monospace" font-size="3.9" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">4</text>
+<text x="4" y="83.365" font-family="monospace" font-size="3.9" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">5</text>
+<text x="4" y="98.365" font-family="monospace" font-size="3.9" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">6</text>
+<text x="10" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">CLOCK</text>
+<text x="22" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">BPM</text>
+<text x="33" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">OFFS</text>
+<text x="43" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">SYNC</text>
+<text x="60.5" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">PLAY</text>
+<text x="82.5" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">RESET</text>
+<text x="100" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">SEEK</text>
+<text x="110" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">TRIG</text>
+<text x="122" y="111.98" font-family="monospace" font-size="2.8" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">POS</text>
+<text x="199.04" y="6" font-family="sans-serif" font-size="4" fill="#e0703a">TAPE JAM panel template</text>
+<text x="199.04" y="12" font-family="sans-serif" font-size="2.6" fill="#cccccc">Page: 193.04 x 128.5 mm (38 HP). Draw in the "Artwork" layer.</text>
+<text x="199.04" y="15.9" font-family="sans-serif" font-size="2.6" fill="#cccccc">This GUIDES layer is locked; hide or delete it before saving to res/TapeJam.svg.</text>
+<circle cx="200.54" cy="20.900000000000002" r="1.4" fill="#3d8bff" fill-opacity="0.4" stroke="#3d8bff" stroke-width="0.25"/>
+<text x="203.04" y="21.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">jack (PJ301M) 8.0 mm (dashed ring = 1 mm clearance)</text>
+<circle cx="200.54" cy="24.900000000000002" r="1.4" fill="#3ecf6a" fill-opacity="0.4" stroke="#3ecf6a" stroke-width="0.25"/>
+<text x="203.04" y="25.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">knob (RoundSmallBlack) 7.7 mm (dashed ring = 1 mm clearance)</text>
+<circle cx="200.54" cy="28.900000000000002" r="1.4" fill="#a6e35b" fill-opacity="0.4" stroke="#a6e35b" stroke-width="0.25"/>
+<text x="203.04" y="29.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">trimpot 6.0 mm (dashed ring = 1 mm clearance)</text>
+<circle cx="200.54" cy="32.9" r="1.4" fill="#ff8a3d" fill-opacity="0.4" stroke="#ff8a3d" stroke-width="0.25"/>
+<text x="203.04" y="33.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">lit button (VCVButton) 6.1 mm (dashed ring = 1 mm clearance)</text>
+<rect x="199.04" y="35.199999999999996" width="3" height="2.6" fill="#ff3030" fill-opacity="0.3" stroke="#ff3030" stroke-width="0.25"/>
+<text x="203.04" y="37.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">screen drawn by code: artwork under it is hidden</text>
+<text x="199.04" y="41.8" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Faint white text = labels currently drawn by code (runtimeLabels: true).</text>
+<text x="199.04" y="45.699999999999996" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Put your own lettering in the artwork as PATHS, then set runtimeLabels false.</text>
+<text x="199.04" y="51.599999999999994" font-family="sans-serif" font-size="2.6" fill="#ff8080">Rack cannot render: &lt;text>, embedded images, CSS &lt;style>, filters/blur,</text>
+<text x="199.04" y="55.49999999999999" font-family="sans-serif" font-size="2.6" fill="#ff8080">masks, clip paths, &lt;use>/symbols, patterns. Check with: node tools/check_panel.mjs</text>
+<text x="199.04" y="59.39999999999999" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Moving a control? Edit tools/layout.json and re-run tools/gen_panel.mjs.</text>
+</g>
+</svg>

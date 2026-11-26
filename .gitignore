@@ -1,0 +1,12 @@
+# build output
+build/
+dist/
+plugin.dll
+plugin.so
+plugin.dylib
+
+# Rack SDK (downloaded locally, see README)
+dep/
+
+# test renders
+tests/out/

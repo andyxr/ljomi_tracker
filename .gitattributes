@@ -1,0 +1,4 @@
+# Keep LF everywhere (make and sh choke on CRLF), regardless of core.autocrlf.
+* text=auto eol=lf
+*.wav binary
+*.png binary
