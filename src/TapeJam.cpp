@@ -92,6 +92,7 @@ struct TapeJam : Module {
 
 	double t = 0.0; // master (Flux) position, seconds of stem time
 	bool playing = false;
+	bool loop = false; // at the end of the longest stem: wrap to 0 instead of stopping
 	float runGain = 0.f;
 	double speed = 1.0;
 	float laneGain[NUM_LANES] = {};
@@ -99,7 +100,7 @@ struct TapeJam : Module {
 
 	// Read by the UI (benign races on plain values).
 	double dispT = 0.0, dispMax = 0.0, dispBpm = 120.0, dispSpeed = 1.0;
-	bool dispClock = false, dispSync = false;
+	bool dispClock = false, dispSync = false, dispLoop = false;
 	double dispRead[NUM_LANES] = {};
 	int dispFx[NUM_LANES] = {};
 
@@ -196,6 +197,7 @@ struct TapeJam : Module {
 			loadLane(i, "");
 		seekTo(0.0);
 		playing = false;
+		loop = false;
 		ppqn = 1;
 	}
 
@@ -289,8 +291,12 @@ struct TapeJam : Module {
 
 		if (playing || runGain > 0.f)
 			t += speed / sr;
-		if (playing && maxDur > 0.0 && t >= maxDur)
-			playing = false;
+		if (playing && maxDur > 0.0 && t >= maxDur) {
+			if (loop)
+				seekTo(std::fmod(t, maxDur)); // keeps the overshoot so the loop length is exact
+			else
+				playing = false;
+		}
 
 		dispT = t;
 		dispMax = maxDur;
@@ -298,6 +304,7 @@ struct TapeJam : Module {
 		dispSpeed = speed;
 		dispClock = clockPatched && clock.valid;
 		dispSync = sync;
+		dispLoop = loop;
 
 		if (lightDivider.process()) {
 			for (int i = 0; i < NUM_LANES; i++) {
@@ -320,6 +327,7 @@ struct TapeJam : Module {
 			json_array_append_new(arr, json_string(paths[i].c_str()));
 		json_object_set_new(root, "lanes", arr);
 		json_object_set_new(root, "ppqn", json_integer(ppqn));
+		json_object_set_new(root, "loop", json_boolean(loop));
 		return root;
 	}
 
@@ -327,6 +335,9 @@ struct TapeJam : Module {
 		json_t* p = json_object_get(root, "ppqn");
 		if (p)
 			ppqn = std::max(1, (int) json_integer_value(p));
+		json_t* lp = json_object_get(root, "loop");
+		if (lp)
+			loop = json_boolean_value(lp);
 		json_t* arr = json_object_get(root, "lanes");
 		if (arr) {
 			for (int i = 0; i < NUM_LANES && i < (int) json_array_size(arr); i++) {
@@ -390,9 +401,9 @@ struct LaneDisplay : Widget {
 	void draw(const DrawArgs& args) override {
 		nvgBeginPath(args.vg);
 		nvgRoundedRect(args.vg, 0, 0, box.size.x, box.size.y, 2.f);
-		nvgFillColor(args.vg, nvgRGB(0x0d, 0x0e, 0x11));
+		nvgFillColor(args.vg, nvgRGB(0x08, 0x0f, 0x1e));
 		nvgFill(args.vg);
-		nvgStrokeColor(args.vg, nvgRGB(0x3a, 0x3d, 0x45));
+		nvgStrokeColor(args.vg, nvgRGB(0x24, 0x44, 0x5a));
 		nvgStrokeWidth(args.vg, 0.7f);
 		nvgStroke(args.vg);
 	}
@@ -412,7 +423,7 @@ struct LaneDisplay : Widget {
 
 		std::string name = string::f("LANE %d", lane + 1);
 		std::string right;
-		NVGcolor nameCol = nvgRGB(0x80, 0x84, 0x8c);
+		NVGcolor nameCol = nvgRGB(0x64, 0x8d, 0xa6);
 		double dur = 0, master = 0, readPos = 0;
 		int fx = FX_NONE;
 		if (module) {
@@ -430,7 +441,7 @@ struct LaneDisplay : Widget {
 			}
 			else if (s && s->frames > 0) {
 				name = s->name;
-				nameCol = nvgRGB(0xe6, 0xe6, 0xe6);
+				nameCol = nvgRGB(0xdc, 0xeb, 0xf2);
 				dur = s->duration();
 				right = fmtTime(dur);
 			}
@@ -444,20 +455,20 @@ struct LaneDisplay : Widget {
 		nvgText(args.vg, pad, 3.f, name.c_str(), NULL);
 		if (!right.empty()) {
 			nvgTextAlign(args.vg, NVG_ALIGN_RIGHT | NVG_ALIGN_TOP);
-			nvgFillColor(args.vg, nvgRGB(0x80, 0x84, 0x8c));
+			nvgFillColor(args.vg, nvgRGB(0x64, 0x8d, 0xa6));
 			nvgText(args.vg, box.size.x - pad, 3.f, right.c_str(), NULL);
 		}
 
 		// Timeline bar
 		nvgBeginPath(args.vg);
 		nvgRect(args.vg, pad, barY, barW, barH);
-		nvgFillColor(args.vg, nvgRGB(0x22, 0x24, 0x2a));
+		nvgFillColor(args.vg, nvgRGB(0x14, 0x23, 0x3a));
 		nvgFill(args.vg);
 		if (dur > 0) {
 			float mx = pad + barW * (float) dclamp(master / dur, 0.0, 1.0);
 			nvgBeginPath(args.vg);
 			nvgRect(args.vg, pad, barY, mx - pad, barH);
-			nvgFillColor(args.vg, nvgRGB(0x4a, 0x4e, 0x58));
+			nvgFillColor(args.vg, nvgRGB(0x2a, 0x6e, 0x82));
 			nvgFill(args.vg);
 			if (fx != FX_NONE) {
 				// Ghost: where the stem would be (Flux position) vs where it is reading.
@@ -474,7 +485,7 @@ struct LaneDisplay : Widget {
 			else {
 				nvgBeginPath(args.vg);
 				nvgRect(args.vg, mx - 0.75f, barY - 1.5f, 1.5f, barH + 3.f);
-				nvgFillColor(args.vg, nvgRGB(0xe0, 0x70, 0x3a));
+				nvgFillColor(args.vg, nvgRGB(0x9e, 0xe4, 0xaa));
 				nvgFill(args.vg);
 			}
 		}
@@ -497,9 +508,9 @@ struct TransportDisplay : Widget {
 	void draw(const DrawArgs& args) override {
 		nvgBeginPath(args.vg);
 		nvgRoundedRect(args.vg, 0, 0, box.size.x, box.size.y, 2.f);
-		nvgFillColor(args.vg, nvgRGB(0x0d, 0x0e, 0x11));
+		nvgFillColor(args.vg, nvgRGB(0x08, 0x0f, 0x1e));
 		nvgFill(args.vg);
-		nvgStrokeColor(args.vg, nvgRGB(0x3a, 0x3d, 0x45));
+		nvgStrokeColor(args.vg, nvgRGB(0x24, 0x44, 0x5a));
 		nvgStrokeWidth(args.vg, 0.7f);
 		nvgStroke(args.vg);
 	}
@@ -518,12 +529,14 @@ struct TransportDisplay : Widget {
 		std::string line2 = string::f("%.1f BPM %s", bpm, src.c_str());
 		if (module && module->dispClock && module->dispSync)
 			line2 += string::f(" x%.3f", module->dispSpeed);
+		if (module && module->dispLoop)
+			line2 += " LOOP";
 		nvgTextAlign(args.vg, NVG_ALIGN_LEFT | NVG_ALIGN_TOP);
 		nvgFontSize(args.vg, 15.f);
-		nvgFillColor(args.vg, nvgRGB(0xe0, 0x70, 0x3a));
+		nvgFillColor(args.vg, nvgRGB(0x9e, 0xe4, 0xaa));
 		nvgText(args.vg, 5.f, 4.f, line1.c_str(), NULL);
 		nvgFontSize(args.vg, 10.5f);
-		nvgFillColor(args.vg, nvgRGB(0xb0, 0xb4, 0xbc));
+		nvgFillColor(args.vg, nvgRGB(0x8b, 0x9d, 0xb3));
 		nvgText(args.vg, 5.f, 21.f, line2.c_str(), NULL);
 		Widget::drawLayer(args, layer);
 	}
@@ -547,9 +560,9 @@ struct PanelLabels : Widget {
 		if (!font)
 			return;
 		nvgFontFaceId(args.vg, font->handle);
-		NVGcolor dim = nvgRGB(0x9a, 0x9e, 0xa6);
-		label(args, 5.f, 7.5f, "TAPE JAM", 17.f, nvgRGB(0xe0, 0x70, 0x3a), NVG_ALIGN_LEFT);
-		label(args, 46.f, 7.5f, "flux stem player", 10.f, dim, NVG_ALIGN_LEFT);
+		NVGcolor dim = nvgRGB(0x8b, 0x9d, 0xb3);
+		label(args, 5.f, 7.5f, "TAPE JAM", 17.f, nvgRGB(0x9e, 0xe4, 0xaa), NVG_ALIGN_LEFT);
+		label(args, 40.f, 7.5f, "flux stem player", 9.f, dim, NVG_ALIGN_LEFT);
 		for (int f = 0; f < NUM_FX; f++)
 			label(args, fxJackX(f) + FX_BTN_DX / 2, 12.5f, FX_SHORT[f], 9.f, fxColor(f));
 		label(args, LEN_X, 12.5f, "LEN", 9.f, dim);
@@ -643,6 +656,7 @@ struct TapeJamWidget : ModuleWidget {
 	void appendContextMenu(Menu* menu) override {
 		TapeJam* m = getModule<TapeJam>();
 		menu->addChild(new MenuSeparator);
+		menu->addChild(createBoolPtrMenuItem("Loop (wrap to start at the end of the longest stem)", "", &m->loop));
 		menu->addChild(createMenuItem("Load folder of stems (first 6 WAVs)...", "", [=]() { openFolderDialog(m); }));
 		for (int i = 0; i < NUM_LANES; i++) {
 			Sample* s = m->current[i].load();

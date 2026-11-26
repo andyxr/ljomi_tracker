@@ -4,74 +4,7 @@
 //   node tools/gen_panel.mjs --default-panel  -> also overwrites res/TapeJam.svg with the stock artwork
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const L = JSON.parse(fs.readFileSync(path.join(root, 'tools/layout.json'), 'utf8'));
-const NUM_LANES = 6;
-const FX = [['ROLL', '#34d2ff'], ['REV', '#ff52d9'], ['STOP', '#ff9a2e'], ['STUT', '#f5e14a']];
-
-// Real footprints of Rack's stock components (mm, at Rack's 75 dpi).
-const FOOT = {
-  jack: { d: 8.03, color: '#3d8bff', label: 'jack (PJ301M) 8.0 mm' },
-  knob: { d: 7.68, color: '#3ecf6a', label: 'knob (RoundSmallBlack) 7.7 mm' },
-  trim: { d: 6.05, color: '#a6e35b', label: 'trimpot 6.0 mm' },
-  button: { d: 6.10, color: '#ff8a3d', label: 'lit button (VCVButton) 6.1 mm' },
-};
-
-const laneY = i => L.LANE_Y0 + i * L.LANE_DY;
-const fxJackX = f => L.FX_JACK_X0 + f * L.FX_DX;
-const fxBtnX = f => fxJackX(f) + L.FX_BTN_DX;
-
-// ---- control list -------------------------------------------------------
-const controls = [];
-const c = (type, x, y, name) => controls.push({ type, x, y, name });
-for (let i = 0; i < NUM_LANES; i++) {
-  const y = laneY(i), n = i + 1;
-  FX.forEach(([fx], f) => {
-    c('jack', fxJackX(f), y, n + ' ' + fx + ' in');
-    c('button', fxBtnX(f), y, n + ' ' + fx);
-  });
-  c('knob', L.LEN_X, y, n + ' LEN');
-  c('knob', L.LVL_X, y, n + ' LVL');
-  c('button', L.MUTE_X, y, n + ' MUTE');
-  c('jack', L.OUTL_X, y, n + ' L out');
-  c('jack', L.OUTR_X, y, n + ' R out');
-}
-const ty = L.TR_Y;
-c('jack', L.CLOCK_X, ty, 'CLOCK in');
-c('knob', L.BPM_X, ty, 'BPM');
-c('trim', L.OFFSET_X, ty, 'OFFSET');
-c('button', L.SYNC_X, ty, 'SYNC');
-c('button', L.PLAY_BTN_X, ty, 'PLAY');
-c('jack', L.PLAY_IN_X, ty, 'PLAY in');
-c('button', L.RESET_BTN_X, ty, 'RESET');
-c('jack', L.RESET_IN_X, ty, 'RESET in');
-c('jack', L.SEEK_CV_X, ty, 'SEEK cv');
-c('jack', L.SEEK_TRIG_X, ty, 'SEEK trig');
-c('jack', L.POS_X, ty, 'POS out');
-
-// Opaque screens drawn by code on top of the panel.
-const displays = [];
-for (let i = 0; i < NUM_LANES; i++)
-  displays.push({ x: L.DISP_X0, y: laneY(i) - L.DISP_H / 2, w: L.DISP_W, h: L.DISP_H, name: 'lane ' + (i + 1) + ' display' });
-displays.push({ x: L.TRD_X0, y: L.TR_LABEL_Y - 3, w: L.TRD_X1 - L.TRD_X0, h: 14, name: 'transport display' });
-
-// Text currently drawn at runtime by PanelLabels (src/TapeJam.cpp) when runtimeLabels is true.
-const labels = [
-  { x: 5, y: 7.5, t: 'TAPE JAM', s: 6, a: 'start' },
-  { x: 46, y: 7.5, t: 'flux stem player', s: 3.5, a: 'start' },
-  ...FX.map(([t], f) => ({ x: fxJackX(f) + L.FX_BTN_DX / 2, y: 12.5, t, s: 3.2 })),
-  { x: L.LEN_X, y: 12.5, t: 'LEN', s: 3.2 }, { x: L.LVL_X, y: 12.5, t: 'LVL', s: 3.2 },
-  { x: L.MUTE_X, y: 12.5, t: 'MUTE', s: 3.2 }, { x: L.OUTL_X, y: 12.5, t: 'L', s: 3.2 }, { x: L.OUTR_X, y: 12.5, t: 'R', s: 3.2 },
-  ...Array.from({ length: NUM_LANES }, (_, i) => ({ x: 4, y: laneY(i), t: String(i + 1), s: 3.9 })),
-  ...[['CLOCK', L.CLOCK_X], ['BPM', L.BPM_X], ['OFFS', L.OFFSET_X], ['SYNC', L.SYNC_X],
-      ['PLAY', (L.PLAY_BTN_X + L.PLAY_IN_X) / 2], ['RESET', (L.RESET_BTN_X + L.RESET_IN_X) / 2],
-      ['SEEK', L.SEEK_CV_X], ['TRIG', L.SEEK_TRIG_X], ['POS', L.POS_X]].map(([t, x]) => ({ x, y: L.TR_LABEL_Y, t, s: 2.8 })),
-];
-
-const r = v => Math.round(v * 1000) / 1000;
-const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+import { root, L, NUM_LANES, FOOT, PX, controls, displays, labels, laneY, r, esc } from './panel_model.mjs';
 
 // ---- stock artwork (also the starting point inside the template) --------
 function stockArtwork() {
@@ -114,7 +47,8 @@ function guides() {
   }
   // Runtime label positions
   for (const lb of labels) {
-    g += '<text x="' + r(lb.x) + '" y="' + r(lb.y + lb.s * 0.35) + '" font-family="monospace" font-size="' + lb.s + '" fill="#ffffff" fill-opacity="0.45" text-anchor="' + (lb.a || 'middle') + '">' + esc(lb.t) + '</text>\n';
+    const s = r(lb.px * PX);
+    g += '<text x="' + r(lb.x) + '" y="' + r(lb.y + s * 0.35) + '" font-family="monospace" font-size="' + s + '" fill="#ffffff" fill-opacity="0.45" text-anchor="' + (lb.a || 'middle') + '">' + esc(lb.t) + '</text>\n';
   }
   // Legend, outside the page so it never exports
   const lx = L.W + 6;
@@ -124,7 +58,7 @@ function guides() {
   line('Page: ' + L.W + ' x ' + L.H + ' mm (38 HP). Draw in the "Artwork" layer.');
   line('This GUIDES layer is locked; hide or delete it before saving to res/TapeJam.svg.');
   ly += 2;
-  for (const k of Object.values(FOOT)) {
+  for (const k of Object.values(FOOT).filter((k, i, a) => a.findIndex(o => o.label === k.label) === i)) {
     g += '<circle cx="' + (lx + 1.5) + '" cy="' + (ly - 0.9) + '" r="1.4" fill="' + k.color + '" fill-opacity="0.4" stroke="' + k.color + '" stroke-width="0.25"/>\n';
     g += '<text x="' + (lx + 4) + '" y="' + ly + '" font-family="sans-serif" font-size="2.6" fill="#cccccc">' + esc(k.label + ' (dashed ring = 1 mm clearance)') + '</text>\n';
     ly += 4;

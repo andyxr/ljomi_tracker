@@ -19,7 +19,8 @@ lane resumes exactly where it would have been had the effect never been engaged.
 ## Decisions made with the user
 - 6 lanes; a **dedicated gate jack + lit button per effect**; LEN knob per lane (1/64 to 2 bars), level, mute.
 - Stereo out per lane; if only L is patched, L carries the mono sum (L+R)/2.
-- WAV only. Transport: play/stop, reset, seek CV + trigger, position out; stops at end of the longest stem.
+- WAV only. Transport: play/stop, reset, seek CV + trigger, position out; stops at end of the longest stem, or
+  with **Loop** on (context menu, saved in the patch) wraps to 0 via `seekTo` (so held effects cancel like any seek).
 - Tempo: BPM knob = stems' tempo (free running). Clock patched -> sets the grid. SYNC on -> knob = native BPM
   and the clock **varispeeds** the stems (pitch changes; time-stretch deliberately not done).
 - Loading: click a lane display, or the context menu (per lane, or a folder -> first 6 WAVs alphabetically).
@@ -45,6 +46,9 @@ deletes in `ModuleWidget::step()`. **The audio thread never allocates or frees s
 - Labels are drawn at runtime (`PanelLabels`) while `runtimeLabels` is true. Screens and effect colours
   (`fxColor()`) are drawn in code with NanoVG.
 - `node tools/check_panel.mjs` lints res/*.svg for things nanosvg can't render.
+- `node tools/preview_panel.mjs [svg] [--guides] [--empty]` -> `build/preview/panel.png` via headless Edge, using
+  Rack's own component SVGs and font from the Rack install. Control/screen/label data lives in
+  `tools/panel_model.mjs` (shared with gen_panel). Its `CODE` colours mirror `src/TapeJam.cpp`: change both together.
 - Rack component footprints: jack 8.0 mm, small knob 7.7, trimpot 6.0, VCVButton 6.1. The effect jack/button
   pairs are tight (0.45 mm gaps).
 
