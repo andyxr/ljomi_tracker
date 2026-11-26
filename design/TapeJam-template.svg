@@ -515,8 +515,8 @@
 <circle cx="122" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M121,120H123M122,119V121" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="122" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">POS out</text>
-<text x="5" y="9.515" font-family="monospace" font-size="5.757" fill="#ffffff" fill-opacity="0.45" text-anchor="start">TAPE JAM</text>
-<text x="40" y="8.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="start">flux stem player</text>
+<text x="5" y="9.397" font-family="monospace" font-size="5.419" fill="#ffffff" fill-opacity="0.45" text-anchor="start">TAPE JAM</text>
+<text x="41" y="8.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="start">flux stem player</text>
 <text x="51.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">ROLL</text>
 <text x="66.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">REV</text>
 <text x="81.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">STOP</text>

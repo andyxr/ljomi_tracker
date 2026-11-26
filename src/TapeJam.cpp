@@ -406,8 +406,14 @@ static std::string fmtTime(double s) {
 	return string::f("%d:%04.1f", m, s - m * 60);
 }
 
-static std::shared_ptr<window::Font> monoFont() {
-	return APP->window->loadFont(asset::system("res/fonts/ShareTechMono-Regular.ttf"));
+// Fonts match ljomi-systems.com: Unbounded Light for the title, Hanken Grotesk for everything else (both OFL,
+// static instances cut from the Google Fonts variable fonts; licences in res/fonts).
+static std::shared_ptr<window::Font> displayFont() {
+	return APP->window->loadFont(asset::plugin(pluginInstance, "res/fonts/Unbounded-Light.ttf"));
+}
+
+static std::shared_ptr<window::Font> textFont() {
+	return APP->window->loadFont(asset::plugin(pluginInstance, "res/fonts/HankenGrotesk-Medium.ttf"));
 }
 
 static float textWidth(NVGcontext* vg, const std::string& s) {
@@ -441,7 +447,7 @@ struct LaneDisplay : Widget {
 	void drawLayer(const DrawArgs& args, int layer) override {
 		if (layer != 1)
 			return Widget::drawLayer(args, layer);
-		auto font = monoFont();
+		auto font = textFont();
 		if (!font)
 			return;
 		nvgFontFaceId(args.vg, font->handle);
@@ -551,7 +557,7 @@ struct TransportDisplay : Widget {
 	void drawLayer(const DrawArgs& args, int layer) override {
 		if (layer != 1)
 			return Widget::drawLayer(args, layer);
-		auto font = monoFont();
+		auto font = textFont();
 		if (!font)
 			return;
 		nvgFontFaceId(args.vg, font->handle);
@@ -589,13 +595,15 @@ struct PanelLabels : Widget {
 		using namespace layout;
 		if (!RUNTIME_LABELS)
 			return;
-		auto font = monoFont();
-		if (!font)
+		auto title = displayFont();
+		auto font = textFont();
+		if (!title || !font)
 			return;
-		nvgFontFaceId(args.vg, font->handle);
 		NVGcolor dim = nvgRGB(0x8b, 0x9d, 0xb3);
-		label(args, 5.f, 7.5f, "TAPE JAM", 17.f, nvgRGB(0x9e, 0xe4, 0xaa), NVG_ALIGN_LEFT);
-		label(args, 40.f, 7.5f, "flux stem player", 9.f, dim, NVG_ALIGN_LEFT);
+		nvgFontFaceId(args.vg, title->handle);
+		label(args, 5.f, 7.5f, "TAPE JAM", 16.f, nvgRGB(0x9e, 0xe4, 0xaa), NVG_ALIGN_LEFT);
+		nvgFontFaceId(args.vg, font->handle);
+		label(args, 41.f, 7.5f, "flux stem player", 9.f, dim, NVG_ALIGN_LEFT);
 		for (int f = 0; f < NUM_FX; f++)
 			label(args, fxJackX(f) + FX_BTN_DX / 2, 12.5f, FX_SHORT[f], 9.f, fxColor(f));
 		label(args, LEN_X, 12.5f, "LEN", 9.f, dim);

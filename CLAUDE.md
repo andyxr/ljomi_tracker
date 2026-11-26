@@ -46,6 +46,9 @@ deletes in `ModuleWidget::step()`. **The audio thread never allocates or frees s
 - `tools/layout.json` is the **single source of truth** for geometry (mm). `node tools/gen_panel.mjs`
   regenerates `src/Layout.hpp` (do not hand-edit) and `design/TapeJam-template.svg`. Pass
   `--default-panel` only to restore the stock `res/TapeJam.svg`; otherwise the user's artwork is never touched.
+- Fonts (match ljomi-systems.com): title in Unbounded Light (`displayFont()`), all other text in Hanken Grotesk
+  Medium (`textFont()`). Static TTFs in `res/fonts/` were cut from the Google Fonts variable fonts with
+  `fontTools.varLib.instancer` (NanoVG can't select variable-font weights); OFL licences sit beside them.
 - Labels are drawn at runtime (`PanelLabels`) while `runtimeLabels` is true. Screens and effect colours
   (`fxColor()`) are drawn in code with NanoVG.
 - `node tools/check_panel.mjs` lints res/*.svg for things nanosvg can't render.

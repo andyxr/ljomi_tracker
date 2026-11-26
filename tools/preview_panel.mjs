@@ -5,12 +5,12 @@
 // Writes build/preview/panel.html and (via headless Edge/Chrome) build/preview/panel.png.
 //   --guides  overlay control footprints and screen outlines
 //   --empty   screens show the empty state instead of two demo stems
-// Set RACK_DIR if Rack is not in C:/Program Files/VCV/Rack2Free (used for component SVGs and the font).
+// Set RACK_DIR if Rack is not in C:/Program Files/VCV/Rack2Free (used for the component SVGs).
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import { root, L, FOOT, PX, CODE, controls, displays, labels, r, esc } from './panel_model.mjs';
+import { root, L, FOOT, PX, CODE, FONTS, controls, displays, labels, r, esc } from './panel_model.mjs';
 
 const args = process.argv.slice(2);
 const flag = f => args.includes(f);
@@ -54,8 +54,8 @@ for (const k of controls) {
 // ---- code-drawn screens (mirror LaneDisplay / TransportDisplay, in Rack px) --
 const fmtTime = s => { const m = Math.floor(s / 60); return m + ':' + (s - m * 60).toFixed(1).padStart(4, '0'); };
 const DEMO = flag('--empty') ? [] : [{ name: 'drums.wav', dur: 192.4, pos: 0.35 }, { name: 'bass and synth stem.wav', dur: 192.4, pos: 0.35 }];
-const text = (x, y, s, px, col, anchor = 'start', base = 'text-before-edge') =>
-  '<text x="' + r(x) + '" y="' + r(y) + '" font-size="' + px + '" fill="' + col + '" text-anchor="' + anchor + '" dominant-baseline="' + base + '">' + esc(s) + '</text>\n';
+const text = (x, y, s, px, col, anchor = 'start', base = 'text-before-edge', extra = '') =>
+  '<text x="' + r(x) + '" y="' + r(y) + '" font-size="' + px + '" fill="' + col + '" text-anchor="' + anchor + '" dominant-baseline="' + base + '"' + extra + '>' + esc(s) + '</text>\n';
 
 let screens = '';
 for (const d of displays) {
@@ -64,13 +64,9 @@ for (const d of displays) {
   if (d.kind === 'lane') {
     const pad = 4, barY = h - 9, barH = 5, barW = w - 2 * pad;
     const demo = DEMO[d.lane];
-    // Mirrors fitText() in src/TapeJam.cpp: name first, duration only if both fit.
-    const tw = str => str.length * 10.5 * 0.535, avail = w - 2 * pad;
-    let name = demo ? demo.name : 'click to load', right = demo ? fmtTime(demo.dur) : '';
-    if (right && tw(name) + 4 + tw(right) > avail) right = '';
-    if (tw(name) > avail) { while (name && tw(name + '~') > avail) name = name.slice(0, -1); name += '~'; }
-    s += text(pad, 3, name, 10.5, demo ? CODE.laneLoaded : CODE.laneName);
-    if (right) s += text(w - pad, 3, right, 10.5, CODE.laneTime, 'end');
+    // Name and duration are fitted in the page script below, mirroring fitText() in src/TapeJam.cpp.
+    s += text(pad, 3, demo ? demo.name : 'click to load', 10.5, demo ? CODE.laneLoaded : CODE.laneName, 'start', 'text-before-edge', ' class="fit-name" data-avail="' + r(w - 2 * pad) + '"');
+    if (demo) s += text(w - pad, 3, fmtTime(demo.dur), 10.5, CODE.laneTime, 'end', 'text-before-edge', ' class="fit-right"');
     s += '<rect x="' + pad + '" y="' + r(barY) + '" width="' + r(barW) + '" height="' + barH + '" fill="' + CODE.barBg + '"/>\n';
     if (demo) {
       const mx = pad + barW * demo.pos;
@@ -90,7 +86,7 @@ for (const d of displays) {
 let lbls = '';
 if (L.runtimeLabels)
   for (const lb of labels)
-    lbls += '<g transform="translate(' + r(lb.x) + ',' + r(lb.y) + ') scale(' + PX + ')">' + text(0, 0, lb.t, lb.px, lb.col, lb.a || 'middle', 'middle') + '</g>\n';
+    lbls += '<g transform="translate(' + r(lb.x) + ',' + r(lb.y) + ') scale(' + PX + ')">' + text(0, 0, lb.t, lb.px, lb.col, lb.a || 'middle', 'middle', lb.font === 'display' ? ' class="display"' : '') + '</g>\n';
 
 // ---- optional guides -----------------------------------------------------
 let guides = '';
@@ -105,15 +101,19 @@ if (flag('--guides')) {
 }
 
 // ---- page ----------------------------------------------------------------
-const font = rackDir && path.join(rackDir, 'res/fonts/ShareTechMono-Regular.ttf');
-const fontFace = font && fs.existsSync(font)
-  ? '@font-face{font-family:RackMono;src:url(data:font/ttf;base64,' + fs.readFileSync(font).toString('base64') + ');}' : '';
+const face = (name, rel) => '@font-face{font-family:' + name + ';src:url(data:font/ttf;base64,' + fs.readFileSync(path.join(root, rel)).toString('base64') + ');}';
+const fontFace = face('TJDisplay', FONTS.display) + face('TJText', FONTS.text);
+// Trim lane names like fitText(): name first, duration only if both fit.
+const fitScript = '<script>document.fonts.ready.then(() => { for (const n of document.querySelectorAll(".fit-name")) {' +
+  'const avail = +n.dataset.avail, rt = n.parentNode.querySelector(".fit-right"), w = e => e.getComputedTextLength();' +
+  'if (rt && w(n) + 4 + w(rt) > avail) rt.remove();' +
+  'if (w(n) > avail) { let s = n.textContent; do { s = s.slice(0, -1); n.textContent = s + "~"; } while (s && w(n) > avail); } } });</script>';
 const W = Math.round(L.W * SCALE), H = Math.round(L.H * SCALE);
 const html = '<!doctype html><html><head><meta charset="utf-8"><title>Tape Jam panel preview</title><style>' + fontFace +
-  'html,body{margin:0;background:#202020}svg{display:block}text{font-family:RackMono,monospace}</style></head><body>\n' +
+  'html,body{margin:0;background:#202020}svg{display:block}text{font-family:TJText,sans-serif}text.display{font-family:TJDisplay,sans-serif}</style></head><body>\n' +
   '<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + L.W + ' ' + L.H + '">\n' +
   '<g id="art">' + artInner + '</g>\n<g id="components">\n' + comps + '</g>\n<g id="screens">\n' + screens +
-  '</g>\n<g id="labels">\n' + lbls + '</g>\n<g id="guides">\n' + guides + '</g>\n</svg>\n</body></html>\n';
+  '</g>\n<g id="labels">\n' + lbls + '</g>\n<g id="guides">\n' + guides + '</g>\n</svg>\n' + fitScript + '\n</body></html>\n';
 
 fs.mkdirSync(outDir, { recursive: true });
 const htmlPath = path.join(outDir, 'panel.html');
@@ -129,7 +129,7 @@ if (!flag('--no-png')) {
   }
   else {
     const png = path.join(outDir, 'panel.png');
-    const res = spawnSync(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--window-size=' + W + ',' + H,
+    const res = spawnSync(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--virtual-time-budget=3000', '--window-size=' + W + ',' + H,
       '--screenshot=' + png, pathToFileURL(htmlPath).href], { stdio: 'ignore', timeout: 60000 });
     if (res.status === 0 && fs.existsSync(png)) console.log('wrote ' + path.relative(root, png));
     else console.warn('screenshot failed: open the HTML instead.');
