@@ -53,7 +53,7 @@ for (const k of controls) {
 
 // ---- code-drawn screens (mirror LaneDisplay / TransportDisplay, in Rack px) --
 const fmtTime = s => { const m = Math.floor(s / 60); return m + ':' + (s - m * 60).toFixed(1).padStart(4, '0'); };
-const DEMO = flag('--empty') ? [] : [{ name: 'drums.wav', dur: 192.4, pos: 0.35 }, { name: 'bass.wav', dur: 192.4, pos: 0.35 }];
+const DEMO = flag('--empty') ? [] : [{ name: 'drums.wav', dur: 192.4, pos: 0.35 }, { name: 'bass and synth stem.wav', dur: 192.4, pos: 0.35 }];
 const text = (x, y, s, px, col, anchor = 'start', base = 'text-before-edge') =>
   '<text x="' + r(x) + '" y="' + r(y) + '" font-size="' + px + '" fill="' + col + '" text-anchor="' + anchor + '" dominant-baseline="' + base + '">' + esc(s) + '</text>\n';
 
@@ -64,8 +64,13 @@ for (const d of displays) {
   if (d.kind === 'lane') {
     const pad = 4, barY = h - 9, barH = 5, barW = w - 2 * pad;
     const demo = DEMO[d.lane];
-    s += text(pad, 3, demo ? demo.name : 'click to load WAV', 10.5, demo ? CODE.laneLoaded : CODE.laneName);
-    if (demo) s += text(w - pad, 3, fmtTime(demo.dur), 10.5, CODE.laneTime, 'end');
+    // Mirrors fitText() in src/TapeJam.cpp: name first, duration only if both fit.
+    const tw = str => str.length * 10.5 * 0.535, avail = w - 2 * pad;
+    let name = demo ? demo.name : 'click to load', right = demo ? fmtTime(demo.dur) : '';
+    if (right && tw(name) + 4 + tw(right) > avail) right = '';
+    if (tw(name) > avail) { while (name && tw(name + '~') > avail) name = name.slice(0, -1); name += '~'; }
+    s += text(pad, 3, name, 10.5, demo ? CODE.laneLoaded : CODE.laneName);
+    if (right) s += text(w - pad, 3, right, 10.5, CODE.laneTime, 'end');
     s += '<rect x="' + pad + '" y="' + r(barY) + '" width="' + r(barW) + '" height="' + barH + '" fill="' + CODE.barBg + '"/>\n';
     if (demo) {
       const mx = pad + barW * demo.pos;

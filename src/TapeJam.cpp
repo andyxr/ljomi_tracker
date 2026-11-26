@@ -55,6 +55,10 @@ struct TapeJam : Module {
 		RESET_INPUT,
 		SEEK_INPUT,
 		SEEK_TRIG_INPUT,
+		// Appended after the original inputs so saved patches keep their cables.
+		ENUMS(LEN_INPUT, NUM_LANES),
+		ENUMS(LEVEL_INPUT, NUM_LANES),
+		ENUMS(MUTE_INPUT, NUM_LANES),
 		INPUTS_LEN
 	};
 	enum OutputId {
@@ -84,6 +88,8 @@ struct TapeJam : Module {
 
 	Lane lanes[NUM_LANES];
 	dsp::SchmittTrigger gateTrig[NUM_LANES][NUM_FX];
+	dsp::SchmittTrigger muteTrig[NUM_LANES];
+	bool laneMuted[NUM_LANES] = {};
 	dsp::BooleanTrigger playBtn, resetBtn;
 	dsp::SchmittTrigger playIn, resetIn, seekIn;
 	ClockTracker clock;
@@ -115,6 +121,9 @@ struct TapeJam : Module {
 			configSwitch(LEN_PARAM + i, 0.f, NUM_LENGTHS - 1, 4.f, string::f("Lane %d effect length", i + 1), LENGTH_LABELS);
 			configParam(LEVEL_PARAM + i, 0.f, 1.f, 1.f, string::f("Lane %d level", i + 1), "%", 0.f, 100.f);
 			configSwitch(MUTE_PARAM + i, 0.f, 1.f, 0.f, string::f("Lane %d mute", i + 1), {"Unmuted", "Muted"});
+			configInput(LEN_INPUT + i, string::f("Lane %d effect length CV (0-10 V across all lengths, replaces the knob)", i + 1));
+			configInput(LEVEL_INPUT + i, string::f("Lane %d level CV (0-10 V, replaces the knob)", i + 1));
+			configInput(MUTE_INPUT + i, string::f("Lane %d mute gate (muted while high)", i + 1));
 			configOutput(L_OUTPUT + i, string::f("Lane %d left (mono sum if right is unpatched)", i + 1));
 			configOutput(R_OUTPUT + i, string::f("Lane %d right", i + 1));
 			current[i].store(nullptr);
@@ -262,7 +271,9 @@ struct TapeJam : Module {
 
 		// Lanes
 		for (int i = 0; i < NUM_LANES; i++) {
-			int lenIdx = clamp((int) std::round(params[LEN_PARAM + i].getValue()), 0, NUM_LENGTHS - 1);
+			int lenIdx = inputs[LEN_INPUT + i].isConnected()
+				? (int) std::round(clamp(inputs[LEN_INPUT + i].getVoltage(), 0.f, 10.f) / 10.f * (NUM_LENGTHS - 1))
+				: clamp((int) std::round(params[LEN_PARAM + i].getValue()), 0, NUM_LENGTHS - 1);
 			double lenBeats = LENGTH_BEATS[lenIdx];
 			for (int f = 0; f < NUM_FX; f++) {
 				int k = i * NUM_FX + f;
@@ -273,7 +284,12 @@ struct TapeJam : Module {
 			float l, r;
 			lanes[i].render(smp[i], t, grid, dxf, l, r);
 
-			float target = params[MUTE_PARAM + i].getValue() > 0.5f ? 0.f : params[LEVEL_PARAM + i].getValue();
+			muteTrig[i].process(inputs[MUTE_INPUT + i].getVoltage(), 0.1f, 1.f);
+			laneMuted[i] = params[MUTE_PARAM + i].getValue() > 0.5f || (inputs[MUTE_INPUT + i].isConnected() && muteTrig[i].isHigh());
+			float level = inputs[LEVEL_INPUT + i].isConnected()
+				? clamp(inputs[LEVEL_INPUT + i].getVoltage() / 10.f, 0.f, 1.f)
+				: params[LEVEL_PARAM + i].getValue();
+			float target = laneMuted[i] ? 0.f : level;
 			laneGain[i] += clamp(target - laneGain[i], -ramp, ramp);
 			float g = laneGain[i] * runGain * 5.f;
 			l *= g;
@@ -313,7 +329,7 @@ struct TapeJam : Module {
 					float b = lanes[i].activeFx() == f ? 1.f : (lanes[i].held[f] ? 0.15f : 0.f);
 					lights[FX_LIGHT + k].setBrightness(b);
 				}
-				lights[MUTE_LIGHT + i].setBrightness(params[MUTE_PARAM + i].getValue() > 0.5f ? 1.f : 0.f);
+				lights[MUTE_LIGHT + i].setBrightness(laneMuted[i] ? 1.f : 0.f);
 			}
 			lights[PLAY_LIGHT].setBrightness(playing ? 1.f : 0.f);
 			lights[SYNC_LIGHT].setBrightness(sync ? 1.f : 0.f);
@@ -394,6 +410,20 @@ static std::shared_ptr<window::Font> monoFont() {
 	return APP->window->loadFont(asset::system("res/fonts/ShareTechMono-Regular.ttf"));
 }
 
+static float textWidth(NVGcontext* vg, const std::string& s) {
+	float b[4];
+	return nvgTextBounds(vg, 0, 0, s.c_str(), NULL, b);
+}
+
+// Cuts s with a trailing "~" until it fits in w px (current font settings).
+static std::string fitText(NVGcontext* vg, std::string s, float w) {
+	if (textWidth(vg, s) <= w)
+		return s;
+	while (!s.empty() && textWidth(vg, s + "~") > w)
+		s.pop_back();
+	return s + "~";
+}
+
 struct LaneDisplay : Widget {
 	TapeJam* module = nullptr;
 	int lane = 0;
@@ -446,11 +476,14 @@ struct LaneDisplay : Widget {
 				right = fmtTime(dur);
 			}
 			else {
-				name = "click to load WAV";
+				name = "click to load";
 			}
 		}
-		if (name.size() > 24)
-			name = name.substr(0, 23) + "~";
+		// Name first; the duration only shows when both fit.
+		const float avail = box.size.x - 2 * pad;
+		if (!right.empty() && textWidth(args.vg, name) + 4.f + textWidth(args.vg, right) > avail)
+			right.clear();
+		name = fitText(args.vg, name, avail);
 		nvgFillColor(args.vg, nameCol);
 		nvgText(args.vg, pad, 3.f, name.c_str(), NULL);
 		if (!right.empty()) {
@@ -566,8 +599,11 @@ struct PanelLabels : Widget {
 		for (int f = 0; f < NUM_FX; f++)
 			label(args, fxJackX(f) + FX_BTN_DX / 2, 12.5f, FX_SHORT[f], 9.f, fxColor(f));
 		label(args, LEN_X, 12.5f, "LEN", 9.f, dim);
+		label(args, LEN_CV_X, 12.5f, "CV", 9.f, dim);
 		label(args, LVL_X, 12.5f, "LVL", 9.f, dim);
+		label(args, LVL_CV_X, 12.5f, "CV", 9.f, dim);
 		label(args, MUTE_X, 12.5f, "MUTE", 9.f, dim);
+		label(args, MUTE_CV_X, 12.5f, "CV", 9.f, dim);
 		label(args, OUTL_X, 12.5f, "L", 9.f, dim);
 		label(args, OUTR_X, 12.5f, "R", 9.f, dim);
 		for (int i = 0; i < NUM_LANES; i++)
@@ -623,6 +659,9 @@ struct TapeJamWidget : ModuleWidget {
 			addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(LEN_X, y)), module, TapeJam::LEN_PARAM + i));
 			addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(LVL_X, y)), module, TapeJam::LEVEL_PARAM + i));
 			addParam(createLightParamCentered<VCVLightLatch<MediumSimpleLight<RedLight>>>(mm2px(Vec(MUTE_X, y)), module, TapeJam::MUTE_PARAM + i, TapeJam::MUTE_LIGHT + i));
+			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(LEN_CV_X, y)), module, TapeJam::LEN_INPUT + i));
+			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(LVL_CV_X, y)), module, TapeJam::LEVEL_INPUT + i));
+			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(MUTE_CV_X, y)), module, TapeJam::MUTE_INPUT + i));
 			addOutput(createOutputCentered<DarkPJ301MPort>(mm2px(Vec(OUTL_X, y)), module, TapeJam::L_OUTPUT + i));
 			addOutput(createOutputCentered<DarkPJ301MPort>(mm2px(Vec(OUTR_X, y)), module, TapeJam::R_OUTPUT + i));
 		}

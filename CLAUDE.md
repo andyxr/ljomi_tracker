@@ -18,6 +18,9 @@ lane resumes exactly where it would have been had the effect never been engaged.
 
 ## Decisions made with the user
 - 6 lanes; a **dedicated gate jack + lit button per effect**; LEN knob per lane (1/64 to 2 bars), level, mute.
+- Per-lane CV jacks next to LEN/LVL/MUTE (38 HP kept by shrinking the lane screens to 32 mm). Patched LEN/LVL
+  CV **replaces** the knob (0-10 V across all lengths / 0-100%). MUTE gate mutes while high, OR-ed with the button.
+  New input IDs are appended after SEEK_TRIG_INPUT so old patches keep their cables.
 - Stereo out per lane; if only L is patched, L carries the mono sum (L+R)/2.
 - WAV only. Transport: play/stop, reset, seek CV + trigger, position out; stops at end of the longest stem, or
   with **Loop** on (context menu, saved in the patch) wraps to 0 via `seekTo` (so held effects cancel like any seek).
@@ -36,8 +39,8 @@ deletes in `ModuleWidget::step()`. **The audio thread never allocates or frees s
 - Engine changes: extend `tests/flux_test.cpp`. The key invariant is **bit-identical output vs an untouched
   reference lane after release**, with no sample step above the click threshold. Demo WAVs go to tests/out/.
 - Smoke-test in Rack without touching the user's setup: copy the plugin into a scratch
-  `<dir>/plugins-win-x64/TapeJam` and run `Rack.exe -h -u <dir> patch.vcv` (plain-JSON patch works), then
-  read `<dir>/log.txt`.
+  `<dir>/plugins-win-x64/TapeJam` and run `Rack.exe -h -u <dir> <dir>\patch.vcv` **from the Rack install dir** (`cd "/c/Program Files/VCV/Rack2Free"`;
+  elsewhere it exits 1 with no log), with Windows-style paths. Plain-JSON patch works; read `<dir>/log.txt`.
 
 ## Panel
 - `tools/layout.json` is the **single source of truth** for geometry (mm). `node tools/gen_panel.mjs`
