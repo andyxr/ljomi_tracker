@@ -20,7 +20,7 @@ export const CODE = {
   screenFill: '#080f1e', screenStroke: '#24445a',
   title: '#9ee4aa', dim: '#8b9db3',
   laneName: '#648da6', laneLoaded: '#dceBf2'.toLowerCase(), laneTime: '#648da6', barBg: '#14233a', barFill: '#2a6e82', playhead: '#9ee4aa',
-  trTime: '#9ee4aa', trInfo: '#8b9db3',
+  trTime: '#9ee4aa', trInfo: '#8b9db3', scopeLine: '#49c5a8',
 };
 
 // Real footprints of Rack's stock components (mm). svg: ComponentLibrary files the preview draws (bg first).

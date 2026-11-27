@@ -78,6 +78,14 @@ for (const d of displays) {
     const t = DEMO.length ? DEMO[0].dur * DEMO[0].pos : 0, mx = DEMO.length ? DEMO[0].dur : 0;
     s += text(5, 4, fmtTime(t) + ' / ' + fmtTime(mx), 15, CODE.trTime);
     s += text(5, 21, '120.0 BPM INT', 10.5, CODE.trInfo);
+    // Scope (TransportDisplay::drawScope): demo trace in a unit-wide box, placed after the text by the page script.
+    if (DEMO.length) {
+      const y0 = 4, y1 = h - 4, mid = (y0 + y1) / 2, half = (y1 - y0) / 2, N = 200;
+      const v = k => half * (0.45 * Math.sin(k * 0.094) + 0.2 * Math.sin(k * 0.31 + 1) + 0.08 * Math.sin(k * 1.3));
+      let d = '';
+      for (let k = 0; k < N; k++) d += (k ? 'L' : 'M') + r(k / (N - 1)) + ',' + r(mid - v(k));
+      s += '<path class="scope" data-right="' + r(w - 5) + '" d="' + d + '" fill="none" stroke="' + CODE.scopeLine + '" stroke-width="1" vector-effect="non-scaling-stroke"/>\n';
+    }
   }
   screens += '<g transform="translate(' + r(d.x) + ',' + r(d.y) + ') scale(' + PX + ')">\n' + s + '</g>\n';
 }
@@ -104,7 +112,9 @@ if (flag('--guides')) {
 const face = (name, rel) => '@font-face{font-family:' + name + ';src:url(data:font/ttf;base64,' + fs.readFileSync(path.join(root, rel)).toString('base64') + ');}';
 const fontFace = face('TJDisplay', FONTS.display) + face('TJText', FONTS.text);
 // Trim lane names like fitText(): name first, duration only if both fit.
-const fitScript = '<script>document.fonts.ready.then(() => { for (const n of document.querySelectorAll(".fit-name")) {' +
+const fitScript = '<script>document.fonts.ready.then(() => { for (const p of document.querySelectorAll(".scope")) {' +
+  'const ts = [...p.parentNode.querySelectorAll("text")], x0 = Math.max(...ts.map(t => 5 + t.getComputedTextLength())) + 8, x1 = +p.dataset.right;' +
+  'p.setAttribute("transform", "translate(" + x0 + ",0) scale(" + (x1 - x0) + ",1)"); } for (const n of document.querySelectorAll(".fit-name")) {' +
   'const avail = +n.dataset.avail, rt = n.parentNode.querySelector(".fit-right"), w = e => e.getComputedTextLength();' +
   'if (rt && w(n) + 4 + w(rt) > avail) rt.remove();' +
   'if (w(n) > avail) { let s = n.textContent; do { s = s.slice(0, -1); n.textContent = s + "~"; } while (s && w(n) > avail); } } });</script>';

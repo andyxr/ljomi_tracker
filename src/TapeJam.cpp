@@ -106,6 +106,15 @@ struct TapeJam : Module {
 	double speed = 1.0;
 	float laneGain[NUM_LANES] = {};
 	float laneMix[NUM_LANES];
+
+	// Oscilloscope of the summed lane outputs (mono, volts), box-filtered down to about SCOPE_RATE and kept
+	// in a ring the UI reads. Benign races like the other disp values; scopeHead counts points written.
+	static const int SCOPE_LEN = 2048;
+	static constexpr float SCOPE_RATE = 12000.f;
+	float scope[SCOPE_LEN] = {};
+	std::atomic<int> scopeHead{0};
+	float scopeAcc = 0.f;
+	int scopeCount = 0;
 	Grid grid;
 
 	// Read by the UI (benign races on plain values).
@@ -277,6 +286,7 @@ struct TapeJam : Module {
 		runGain = playing ? std::min(1.f, runGain + ramp) : std::max(0.f, runGain - ramp);
 
 		// Lanes
+		float mixSum = 0.f;
 		for (int i = 0; i < NUM_LANES; i++) {
 			int lenIdx = inputs[LEN_INPUT + i].isConnected()
 				? (int) std::round(clamp(inputs[LEN_INPUT + i].getVoltage(), 0.f, 10.f) / 10.f * (NUM_LENGTHS - 1))
@@ -310,8 +320,19 @@ struct TapeJam : Module {
 			else
 				outputs[L_OUTPUT + i].setVoltage(l);
 			outputs[R_OUTPUT + i].setVoltage(r);
+			mixSum += 0.5f * (l + r);
 			dispRead[i] = lanes[i].lastReadPos;
 			dispFx[i] = lanes[i].activeFx();
+		}
+
+		scopeAcc += mixSum;
+		int decim = std::max(1, (int) std::round(sr / SCOPE_RATE));
+		if (++scopeCount >= decim) {
+			int h = scopeHead.load(std::memory_order_relaxed);
+			scope[h % SCOPE_LEN] = scopeAcc / scopeCount;
+			scopeHead.store(h + 1, std::memory_order_release);
+			scopeAcc = 0.f;
+			scopeCount = 0;
 		}
 
 		outputs[POS_OUTPUT].setVoltage(maxDur > 0.0 ? (float) (10.0 * dclamp(t / maxDur, 0.0, 1.0)) : 0.f);
@@ -601,10 +622,59 @@ struct TransportDisplay : Widget {
 		nvgFontSize(args.vg, 15.f);
 		nvgFillColor(args.vg, nvgRGB(0x9e, 0xe4, 0xaa));
 		nvgText(args.vg, 5.f, 4.f, line1.c_str(), NULL);
+		// Measure with every digit as 0 so the scope edge doesn't jitter as the time changes.
+		auto zeroed = [](std::string s) {
+			for (char& c : s)
+				if (c >= '0' && c <= '9')
+					c = '0';
+			return s;
+		};
+		float textEnd = 5.f + textWidth(args.vg, zeroed(line1));
 		nvgFontSize(args.vg, 10.5f);
 		nvgFillColor(args.vg, nvgRGB(0x8b, 0x9d, 0xb3));
 		nvgText(args.vg, 5.f, 21.f, line2.c_str(), NULL);
+		textEnd = std::max(textEnd, 5.f + textWidth(args.vg, zeroed(line2)));
+		drawScope(args.vg, textEnd + 8.f, 4.f, box.size.x - 5.f, box.size.y - 4.f);
 		Widget::drawLayer(args, layer);
+	}
+
+	// Oscilloscope of the summed output: the last ~40 ms redrawn in place each frame, started on a rising
+	// zero crossing (when there is one) so steady tones stand still. Full scale is +-10 V.
+	void drawScope(NVGcontext* vg, float x0, float y0, float x1, float y1) {
+		if (x1 - x0 < 8.f)
+			return;
+		const float mid = 0.5f * (y0 + y1), half = 0.5f * (y1 - y0);
+		nvgBeginPath(vg);
+		nvgRect(vg, x0, mid - 0.25f, x1 - x0, 0.5f);
+		nvgFillColor(vg, nvgRGB(0x14, 0x23, 0x3a));
+		nvgFill(vg);
+		if (!module)
+			return;
+		const int N = TapeJam::SCOPE_LEN;
+		const int W = (int) (0.04f * TapeJam::SCOPE_RATE); // points shown
+		int head = module->scopeHead.load(std::memory_order_acquire);
+		if (head < 2 * W)
+			return;
+		const float* s = module->scope;
+		auto at = [&](int i) { return s[i % N]; };
+		// Look back up to one window for a rising crossing; the trace then starts there.
+		int start = head - W;
+		for (int i = head - W; i > head - 2 * W; i--) {
+			if (at(i - 1) < 0.f && at(i) >= 0.f) {
+				start = i;
+				break;
+			}
+		}
+		auto y = [&](float v) { return mid - clamp(v / 10.f, -1.f, 1.f) * half; };
+		float dx = (x1 - x0) / (W - 1);
+		nvgBeginPath(vg);
+		nvgMoveTo(vg, x0, y(at(start)));
+		for (int k = 1; k < W; k++)
+			nvgLineTo(vg, x0 + k * dx, y(at(start + k)));
+		nvgStrokeColor(vg, nvgRGB(0x49, 0xc5, 0xa8));
+		nvgStrokeWidth(vg, 1.f);
+		nvgLineJoin(vg, NVG_ROUND);
+		nvgStroke(vg);
 	}
 };
 
