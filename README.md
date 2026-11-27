@@ -23,3 +23,14 @@ had the effect never happened.
   `src/Layout.hpp` and the design template.
 - `design/`: panel design template and re-skinning guide
 - `src/dr_wav.h`: [dr_wav](https://github.com/mackron/dr_libs) (public domain / MIT-0)
+
+## License
+
+Copyright (C) 2026 Andy Deighton
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+version. See [LICENSE.txt](LICENSE.txt).
+
+The fonts in `res/fonts/` (Unbounded, Hanken Grotesk) are under the SIL Open Font License; their licence files sit
+beside them.
