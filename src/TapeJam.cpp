@@ -421,18 +421,25 @@ static float textWidth(NVGcontext* vg, const std::string& s) {
 	return nvgTextBounds(vg, 0, 0, s.c_str(), NULL, b);
 }
 
-// Cuts s with a trailing "~" until it fits in w px (current font settings).
-static std::string fitText(NVGcontext* vg, std::string s, float w) {
-	if (textWidth(vg, s) <= w)
-		return s;
-	while (!s.empty() && textWidth(vg, s + "~") > w)
-		s.pop_back();
-	return s + "~";
-}
-
 struct LaneDisplay : Widget {
 	TapeJam* module = nullptr;
 	int lane = 0;
+	// Marquee for names wider than the screen: the scroll restarts whenever the name changes.
+	std::string scrollName;
+	double scrollStart = 0.0;
+
+	// Scroll offset (px) for text overflowing by `over` px: hold, scroll to the end, hold, jump back.
+	float marqueeOffset(const std::string& name, float over) {
+		const double hold = 1.5, pxPerSec = 15.0;
+		double now = system::getTime();
+		if (name != scrollName) {
+			scrollName = name;
+			scrollStart = now;
+		}
+		double travel = over / pxPerSec;
+		double ph = std::fmod(now - scrollStart, hold + travel + hold);
+		return (float) (dclamp(ph - hold, 0.0, travel) * pxPerSec);
+	}
 
 	void draw(const DrawArgs& args) override {
 		nvgBeginPath(args.vg);
@@ -489,9 +496,18 @@ struct LaneDisplay : Widget {
 		const float avail = box.size.x - 2 * pad;
 		if (!right.empty() && textWidth(args.vg, name) + 4.f + textWidth(args.vg, right) > avail)
 			right.clear();
-		name = fitText(args.vg, name, avail);
+		float over = textWidth(args.vg, name) - avail;
 		nvgFillColor(args.vg, nameCol);
-		nvgText(args.vg, pad, 3.f, name.c_str(), NULL);
+		if (over > 0.f) {
+			float off = marqueeOffset(name, over);
+			nvgSave(args.vg);
+			nvgIntersectScissor(args.vg, pad, 0.f, avail, barY - 1.5f);
+			nvgText(args.vg, pad - off, 3.f, name.c_str(), NULL);
+			nvgRestore(args.vg);
+		}
+		else {
+			nvgText(args.vg, pad, 3.f, name.c_str(), NULL);
+		}
 		if (!right.empty()) {
 			nvgTextAlign(args.vg, NVG_ALIGN_RIGHT | NVG_ALIGN_TOP);
 			nvgFillColor(args.vg, nvgRGB(0x64, 0x8d, 0xa6));
