@@ -10,3 +10,6 @@ dep/
 
 # test renders
 tests/out/
+
+# notes for Claude Code (kept local)
+CLAUDE.md
