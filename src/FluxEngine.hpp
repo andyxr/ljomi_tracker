@@ -1,4 +1,4 @@
-// Tape Jam - Flux playback engine (no Rack dependency, unit-testable).
+// Ljomi Tracker - Flux playback engine (no Rack dependency, unit-testable).
 //
 // Model: one master clock "t" (seconds of stem time) always advances. Each lane
 // renders from a Voice, a pure function of t. With no effect the voice reads at t.

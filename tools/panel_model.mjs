@@ -77,8 +77,8 @@ displays.push({ kind: 'transport', x: L.TRD_X0, y: L.TR_LABEL_Y - 3, w: L.TRD_X1
 
 // Text drawn at runtime by PanelLabels when runtimeLabels is true. px = NanoVG font size; y is the text middle.
 export const labels = [
-  { x: 5, y: 7.5, t: 'TAPE JAM', px: 16, col: CODE.title, a: 'start', font: 'display' },
-  { x: 41, y: 7.5, t: 'flux stem player', px: 9, col: CODE.dim, a: 'start' },
+  { x: 5, y: 7.5, t: 'LJOMI TRACKER', px: 13, col: CODE.title, a: 'start', font: 'display' },
+  { x: 50, y: 7.5, t: 'flux stem player', px: 9, col: CODE.dim, a: 'start' },
   ...FX.map(([t, col], f) => ({ x: fxJackX(f) + L.FX_BTN_DX / 2, y: 12.5, t, px: 9, col })),
   ...[['LEN', L.LEN_X], ['CV', L.LEN_CV_X], ['LVL', L.LVL_X], ['CV', L.LVL_CV_X], ['MIX', L.MIX_X], ['CV', L.MIX_CV_X], ['MUTE', L.MUTE_X], ['CV', L.MUTE_CV_X], ['L', L.OUTL_X], ['R', L.OUTR_X]]
     .map(([t, x]) => ({ x, y: 12.5, t, px: 9, col: CODE.dim })),

@@ -683,7 +683,7 @@
   <rect x="200.0885" y="6.68" width="1.8" height="0.68" fill="#070e1c" />
   <rect x="199.6385" y="7.36" width="2.7" height="0.68" fill="#070e1c" />
   <path d="M4 11H46 M2 14.7H211 M2 105H211" fill="none" stroke="#355373" stroke-width="0.3" />
-  <path d="M4 11.65H36" fill="none" stroke="#2f9e92" stroke-width="0.25" />
+  <path d="M4 11.65H46" fill="none" stroke="#2f9e92" stroke-width="0.25" />
   <rect x="1.4" y="15" width="210.24" height="14" fill="#14233a" />
   <rect x="43" y="15.6" width="62" height="12.8" fill="#12283a" stroke="#294961" stroke-width="0.23" />
   <rect x="185.4" y="15.6" width="23.2" height="12.8" fill="#23243e" stroke="#4d4a73" stroke-width="0.23" />

@@ -1,4 +1,4 @@
-# Tape Jam
+# Ljomi Tracker
 
 A six-lane stem player for VCV Rack 2 with Traktor-style Flux effects. Each lane has loop roll, reverse,
 tape stop and stutter; when an effect is released the lane resumes exactly where it would have been

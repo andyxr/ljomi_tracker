@@ -184,7 +184,7 @@ struct TapeJam : Module {
 			catch (...) {
 			}
 			if (!s) {
-				WARN("Tape Jam: could not load %s", path.c_str());
+				WARN("Ljomi Tracker: could not load %s", path.c_str());
 				loadState[i] = LOAD_ERROR;
 				return;
 			}
@@ -628,9 +628,9 @@ struct PanelLabels : Widget {
 			return;
 		NVGcolor dim = nvgRGB(0x8b, 0x9d, 0xb3);
 		nvgFontFaceId(args.vg, title->handle);
-		label(args, 5.f, 7.5f, "TAPE JAM", 16.f, nvgRGB(0x9e, 0xe4, 0xaa), NVG_ALIGN_LEFT);
+		label(args, 5.f, 7.5f, "LJOMI TRACKER", 13.f, nvgRGB(0x9e, 0xe4, 0xaa), NVG_ALIGN_LEFT);
 		nvgFontFaceId(args.vg, font->handle);
-		label(args, 41.f, 7.5f, "flux stem player", 9.f, dim, NVG_ALIGN_LEFT);
+		label(args, 50.f, 7.5f, "flux stem player", 9.f, dim, NVG_ALIGN_LEFT);
 		for (int f = 0; f < NUM_FX; f++)
 			label(args, fxJackX(f) + FX_BTN_DX / 2, 12.5f, FX_SHORT[f], 9.f, fxColor(f));
 		label(args, LEN_X, 12.5f, "LEN", 9.f, dim);
@@ -762,4 +762,4 @@ struct TapeJamWidget : ModuleWidget {
 	}
 };
 
-Model* modelTapeJam = createModel<TapeJam, TapeJamWidget>("TapeJam");
+Model* modelTapeJam = createModel<TapeJam, TapeJamWidget>("LjomiTracker");

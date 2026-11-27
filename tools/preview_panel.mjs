@@ -109,7 +109,7 @@ const fitScript = '<script>document.fonts.ready.then(() => { for (const n of doc
   'if (rt && w(n) + 4 + w(rt) > avail) rt.remove();' +
   'if (w(n) > avail) { let s = n.textContent; do { s = s.slice(0, -1); n.textContent = s + "~"; } while (s && w(n) > avail); } } });</script>';
 const W = Math.round(L.W * SCALE), H = Math.round(L.H * SCALE);
-const html = '<!doctype html><html><head><meta charset="utf-8"><title>Tape Jam panel preview</title><style>' + fontFace +
+const html = '<!doctype html><html><head><meta charset="utf-8"><title>Ljomi Tracker panel preview</title><style>' + fontFace +
   'html,body{margin:0;background:#202020}svg{display:block}text{font-family:TJText,sans-serif}text.display{font-family:TJDisplay,sans-serif}</style></head><body>\n' +
   '<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + L.W + ' ' + L.H + '">\n' +
   '<g id="art">' + artInner + '</g>\n<g id="components">\n' + comps + '</g>\n<g id="screens">\n' + screens +

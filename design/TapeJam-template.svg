@@ -567,8 +567,8 @@
 <circle cx="122" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M121,120H123M122,119V121" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="122" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">POS out</text>
-<text x="5" y="9.397" font-family="monospace" font-size="5.419" fill="#ffffff" fill-opacity="0.45" text-anchor="start">TAPE JAM</text>
-<text x="41" y="8.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="start">flux stem player</text>
+<text x="5" y="9.041" font-family="monospace" font-size="4.403" fill="#ffffff" fill-opacity="0.45" text-anchor="start">LJOMI TRACKER</text>
+<text x="50" y="8.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="start">flux stem player</text>
 <text x="51.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">ROLL</text>
 <text x="66.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">REV</text>
 <text x="81.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">STOP</text>
@@ -598,7 +598,7 @@
 <text x="100" y="111.948" font-family="monospace" font-size="2.709" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">SEEK</text>
 <text x="110" y="111.948" font-family="monospace" font-size="2.709" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">TRIG</text>
 <text x="122" y="111.948" font-family="monospace" font-size="2.709" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">POS</text>
-<text x="219.36" y="6" font-family="sans-serif" font-size="4" fill="#e0703a">TAPE JAM panel template</text>
+<text x="219.36" y="6" font-family="sans-serif" font-size="4" fill="#e0703a">LJOMI TRACKER panel template</text>
 <text x="219.36" y="12" font-family="sans-serif" font-size="2.6" fill="#cccccc">Page: 213.36 x 128.5 mm (42 HP). Draw in the "Artwork" layer.</text>
 <text x="219.36" y="15.9" font-family="sans-serif" font-size="2.6" fill="#cccccc">This GUIDES layer is locked; hide or delete it before saving to res/TapeJam.svg.</text>
 <circle cx="220.86" cy="20.900000000000002" r="1.4" fill="#3d8bff" fill-opacity="0.4" stroke="#3d8bff" stroke-width="0.25"/>

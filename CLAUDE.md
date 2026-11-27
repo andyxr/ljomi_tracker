@@ -1,6 +1,7 @@
-# Tape Jam: notes for Claude
+# Ljomi Tracker: notes for Claude
 
-VCV Rack 2 plugin (slug `TapeJam`, one module). A 6-lane stem player for multi-minute WAVs. All lanes play
+VCV Rack 2 plugin "Ljomi Tracker" (slug `LjomiTracker`, brand "Ljomi System", one module named "Tracker"; formerly Tape Jam,
+slug `TapeJam`: patches saved before the rename reference the old slug). Source files still use the TapeJam names. A 6-lane stem player for multi-minute WAVs. All lanes play
 from one master clock, and each lane has DJ effects in Traktor **Flux mode**: when an effect is released, the
 lane resumes exactly where it would have been had the effect never been engaged.
 
@@ -42,7 +43,7 @@ deletes in `ModuleWidget::step()`. **The audio thread never allocates or frees s
 - Engine changes: extend `tests/flux_test.cpp`. The key invariant is **bit-identical output vs an untouched
   reference lane after release**, with no sample step above the click threshold. Demo WAVs go to tests/out/.
 - Smoke-test in Rack without touching the user's setup: copy the plugin into a scratch
-  `<dir>/plugins-win-x64/TapeJam` and run `Rack.exe -h -u <dir> <dir>\patch.vcv` **from the Rack install dir** (`cd "/c/Program Files/VCV/Rack2Free"`;
+  `<dir>/plugins-win-x64/LjomiTracker` and run `Rack.exe -h -u <dir> <dir>\patch.vcv` **from the Rack install dir** (`cd "/c/Program Files/VCV/Rack2Free"`;
   elsewhere it exits 1 with no log), with Windows-style paths. Plain-JSON patch works; read `<dir>/log.txt`.
 
 ## Panel
@@ -66,7 +67,7 @@ deletes in `ModuleWidget::step()`. **The audio thread never allocates or frees s
 - Rack code style: tabs, Rack 2 API (configSwitch/configButton, createLightParamCentered...).
 
 ## Open items
-- `plugin.json` license is a placeholder ("proprietary"); author fields are empty. The slug `TapeJam` is
+- `plugin.json` license is a placeholder ("proprietary"); author fields are empty. The slug `LjomiTracker` is
   permanent once published.
 - SYNC follows clock tempo but not phase (no beat-position lock). OFFS nudges the grid manually.
 - Re-skin pending: the user may supply new panel art via the design template.

@@ -1,4 +1,4 @@
-# Re-skinning Tape Jam
+# Re-skinning Ljomi Tracker
 
 1. Open `design/TapeJam-template.svg` in Inkscape (recommended), Illustrator or Figma.
    Page: 213.36 x 128.5 mm (42 HP). In Inkscape the legend sits to the right of the page.

@@ -1,9 +1,9 @@
 {
-  "slug": "TapeJam",
-  "name": "Tape Jam",
+  "slug": "LjomiTracker",
+  "name": "Ljomi Tracker",
   "version": "2.0.0",
   "license": "proprietary",
-  "brand": "Tape Jam",
+  "brand": "Ljomi System",
   "author": "",
   "authorEmail": "",
   "authorUrl": "",
@@ -14,8 +14,8 @@
   "changelogUrl": "",
   "modules": [
     {
-      "slug": "TapeJam",
-      "name": "Tape Jam",
+      "slug": "LjomiTracker",
+      "name": "Tracker",
       "description": "Six-lane stem player with Flux-mode DJ effects",
       "tags": [
         "Sampler",
