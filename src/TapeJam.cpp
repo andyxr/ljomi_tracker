@@ -701,6 +701,9 @@ struct PanelLabels : Widget {
 		label(args, 5.f, 7.5f, "LJOMI TRACKER", 13.f, nvgRGB(0x9e, 0xe4, 0xaa), NVG_ALIGN_LEFT);
 		nvgFontFaceId(args.vg, font->handle);
 		label(args, 50.f, 7.5f, "flux stem player", 9.f, dim, NVG_ALIGN_LEFT);
+		nvgTextLetterSpacing(args.vg, 1.5f);
+		label(args, 5.f, 13.6f, "LJOMI SYSTEMS", 7.f, nvgRGB(0x5f, 0x9a, 0xa6), NVG_ALIGN_LEFT);
+		nvgTextLetterSpacing(args.vg, 0.f);
 		for (int f = 0; f < NUM_FX; f++)
 			label(args, fxJackX(f) + FX_BTN_DX / 2, 12.5f, FX_SHORT[f], 9.f, fxColor(f));
 		label(args, LEN_X, 12.5f, "LEN", 9.f, dim);

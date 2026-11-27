@@ -94,7 +94,7 @@ for (const d of displays) {
 let lbls = '';
 if (L.runtimeLabels)
   for (const lb of labels)
-    lbls += '<g transform="translate(' + r(lb.x) + ',' + r(lb.y) + ') scale(' + PX + ')">' + text(0, 0, lb.t, lb.px, lb.col, lb.a || 'middle', 'middle', lb.font === 'display' ? ' class="display"' : '') + '</g>\n';
+    lbls += '<g transform="translate(' + r(lb.x) + ',' + r(lb.y) + ') scale(' + PX + ')">' + text(0, 0, lb.t, lb.px, lb.col, lb.a || 'middle', 'middle', (lb.font === 'display' ? ' class="display"' : '') + (lb.ls ? ' letter-spacing="' + lb.ls + '"' : '')) + '</g>\n';
 
 // ---- optional guides -----------------------------------------------------
 let guides = '';

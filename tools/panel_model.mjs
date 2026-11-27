@@ -18,7 +18,7 @@ export const FONTS = { display: 'res/fonts/Unbounded-Light.ttf', text: 'res/font
 
 export const CODE = {
   screenFill: '#080f1e', screenStroke: '#24445a',
-  title: '#9ee4aa', dim: '#8b9db3',
+  title: '#9ee4aa', dim: '#8b9db3', brand: '#5f9aa6',
   laneName: '#648da6', laneLoaded: '#dceBf2'.toLowerCase(), laneTime: '#648da6', barBg: '#14233a', barFill: '#2a6e82', playhead: '#9ee4aa',
   trTime: '#9ee4aa', trInfo: '#8b9db3', scopeLine: '#49c5a8',
 };
@@ -75,10 +75,12 @@ for (let i = 0; i < NUM_LANES; i++)
   displays.push({ kind: 'lane', lane: i, x: L.DISP_X0, y: laneY(i) - L.DISP_H / 2, w: L.DISP_W, h: L.DISP_H, name: 'lane ' + (i + 1) + ' display' });
 displays.push({ kind: 'transport', x: L.TRD_X0, y: L.TR_LABEL_Y - 3, w: L.TRD_X1 - L.TRD_X0, h: 14, name: 'transport display' });
 
-// Text drawn at runtime by PanelLabels when runtimeLabels is true. px = NanoVG font size; y is the text middle.
+// Text drawn at runtime by PanelLabels when runtimeLabels is true. px = NanoVG font size; y is the text middle;
+// ls = letter spacing in px (nvgTextLetterSpacing).
 export const labels = [
   { x: 5, y: 7.5, t: 'LJOMI TRACKER', px: 13, col: CODE.title, a: 'start', font: 'display' },
   { x: 50, y: 7.5, t: 'flux stem player', px: 9, col: CODE.dim, a: 'start' },
+  { x: 5, y: 13.6, t: 'LJOMI SYSTEMS', px: 7, col: CODE.brand, a: 'start', ls: 1.5 },
   ...FX.map(([t, col], f) => ({ x: fxJackX(f) + L.FX_BTN_DX / 2, y: 12.5, t, px: 9, col })),
   ...[['LEN', L.LEN_X], ['CV', L.LEN_CV_X], ['LVL', L.LVL_X], ['CV', L.LVL_CV_X], ['MIX', L.MIX_X], ['CV', L.MIX_CV_X], ['MUTE', L.MUTE_X], ['CV', L.MUTE_CV_X], ['L', L.OUTL_X], ['R', L.OUTR_X]]
     .map(([t, x]) => ({ x, y: 12.5, t, px: 9, col: CODE.dim })),

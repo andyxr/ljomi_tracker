@@ -569,6 +569,7 @@
 <text x="122" y="126.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">POS out</text>
 <text x="5" y="9.041" font-family="monospace" font-size="4.403" fill="#ffffff" fill-opacity="0.45" text-anchor="start">LJOMI TRACKER</text>
 <text x="50" y="8.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="start">flux stem player</text>
+<text x="5" y="14.43" font-family="monospace" font-size="2.371" fill="#ffffff" fill-opacity="0.45" text-anchor="start">LJOMI SYSTEMS</text>
 <text x="51.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">ROLL</text>
 <text x="66.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">REV</text>
 <text x="81.75" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">STOP</text>
