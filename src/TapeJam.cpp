@@ -705,6 +705,10 @@ struct TapeJamWidget : ModuleWidget {
 		menu->addChild(new MenuSeparator);
 		menu->addChild(createBoolPtrMenuItem("Loop (wrap to start at the end of the longest stem)", "", &m->loop));
 		menu->addChild(createMenuItem("Load folder of stems (first 6 WAVs)...", "", [=]() { openFolderDialog(m); }));
+		menu->addChild(createMenuItem("Clear all stems", "", [=]() {
+			for (int i = 0; i < NUM_LANES; i++)
+				m->loadLane(i, "");
+		}));
 		for (int i = 0; i < NUM_LANES; i++) {
 			Sample* s = m->current[i].load();
 			std::string name = (s && s->frames > 0) ? s->name : "empty";
