@@ -1,7 +1,7 @@
 {
   "_comment": "Single source of truth for panel geometry (mm). Edit, then run: node tools/gen_panel.mjs",
   "runtimeLabels": true,
-  "W": 193.04,
+  "W": 213.36,
   "H": 128.5,
   "LANE_Y0": 22,
   "LANE_DY": 15,
@@ -15,10 +15,12 @@
   "LEN_CV_X": 119.5,
   "LVL_X": 130,
   "LVL_CV_X": 139.5,
-  "MUTE_X": 149.5,
-  "MUTE_CV_X": 159,
-  "OUTL_X": 171,
-  "OUTR_X": 183,
+  "MIX_X": 150,
+  "MIX_CV_X": 159.5,
+  "MUTE_X": 169.5,
+  "MUTE_CV_X": 179,
+  "OUTL_X": 191,
+  "OUTR_X": 203,
   "TR_LABEL_Y": 111,
   "TR_Y": 120,
   "CLOCK_X": 10,
@@ -33,5 +35,5 @@
   "SEEK_TRIG_X": 110,
   "POS_X": 122,
   "TRD_X0": 131,
-  "TRD_X1": 189
+  "TRD_X1": 209
 }

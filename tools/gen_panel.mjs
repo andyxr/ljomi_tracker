@@ -55,7 +55,7 @@ function guides() {
   let ly = 6;
   const line = (txt, col = '#cccccc', size = 2.6) => { g += '<text x="' + lx + '" y="' + ly + '" font-family="sans-serif" font-size="' + size + '" fill="' + col + '">' + esc(txt) + '</text>\n'; ly += size * 1.5; };
   line('TAPE JAM panel template', '#e0703a', 4);
-  line('Page: ' + L.W + ' x ' + L.H + ' mm (38 HP). Draw in the "Artwork" layer.');
+  line('Page: ' + L.W + ' x ' + L.H + ' mm (' + Math.round(L.W / 5.08) + ' HP). Draw in the "Artwork" layer.');
   line('This GUIDES layer is locked; hide or delete it before saving to res/TapeJam.svg.');
   ly += 2;
   for (const k of Object.values(FOOT).filter((k, i, a) => a.findIndex(o => o.label === k.label) === i)) {

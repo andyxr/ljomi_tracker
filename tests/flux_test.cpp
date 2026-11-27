@@ -62,7 +62,7 @@ struct Event {
 };
 
 // Render 'secs' of a lane driven by events; also renders an untouched reference.
-static void run(const Sample& s, double secs, std::vector<Event> events, std::vector<float>& out, std::vector<float>& ref, std::vector<int>& fxTrace) {
+static void run(const Sample& s, double secs, std::vector<Event> events, std::vector<float>& out, std::vector<float>& ref, std::vector<int>& fxTrace, float mix = 1.f) {
 	Grid g;
 	g.beatLen = 0.5;
 	Lane lane, refLane;
@@ -83,7 +83,7 @@ static void run(const Sample& s, double secs, std::vector<Event> events, std::ve
 			ev++;
 		}
 		float l, r;
-		lane.render(&s, t, g, dxf, l, r);
+		lane.render(&s, t, g, dxf, l, r, mix);
 		out[2 * i] = l;
 		out[2 * i + 1] = r;
 		refLane.render(&s, t, g, dxf, l, r);
@@ -205,7 +205,41 @@ int main() {
 		CHECK(d < 1e-4f, "roll not periodic at 1/16");
 	}
 
-	// 5. WAV decode round trip.
+	// 5. MIX: 0 = only the plain stem (bit-identical to the reference even while effects are held),
+	// 0.5 = audible blend, and either way an exact Flux return with no clicks, including across a seek.
+	for (int fx = 0; fx < NUM_FX; fx++) {
+		std::printf("[mix %s] dry-only and half blend\n", FX_NAMES[fx]);
+		std::vector<float> out, ref, full;
+		std::vector<int> tr;
+		std::vector<Event> evs = {gateEv(1.13, fx, true), gateEv(2.37, fx, false)};
+		int64_t on = (int64_t) (1.13 * SR), off = (int64_t) (2.37 * SR), settled = off + (int64_t) (0.009 * SR);
+		run(sine, 4.0, evs, out, ref, tr, 0.f);
+		float d0 = maxDiff(out, ref, 0, out.size() / 2);
+		CHECK(d0 == 0.f, "mix 0 should equal the plain stem (diff %.6f)", d0);
+		CHECK(tr[on + 10] == fx, "effect should still engage at mix 0");
+		run(sine, 4.0, evs, full, ref, tr, 1.f);
+		run(sine, 4.0, evs, out, ref, tr, 0.5f);
+		float step = maxStep(out, 0, out.size() / 2);
+		float vsRef = maxDiff(out, ref, on + (int64_t) (0.05 * SR), off);
+		float vsFull = maxDiff(out, full, on + (int64_t) (0.05 * SR), off);
+		float after = maxDiff(out, ref, settled, out.size() / 2);
+		std::printf("  max step %.4f, diff vs dry %.4f, vs full wet %.4f, after release %.6f\n", step, vsRef, vsFull, after);
+		CHECK(step < CLICK, "click detected (step %.4f)", step);
+		CHECK(vsRef > 0.02f && vsFull > 0.02f, "half mix is not a blend");
+		CHECK(after == 0.f, "no flux return at mix 0.5 (diff %.6f)", after);
+	}
+	for (float mix : {0.f, 0.5f}) {
+		std::printf("[mix %.1f] seek while an effect is held\n", mix);
+		Sample tone = makeSine(10.0, 220.0);
+		std::vector<float> out, ref;
+		std::vector<int> tr;
+		run(tone, 3.0, {gateEv(0.5, FX_REVERSE, true), {1.0, [](Lane& l, double& t) { l.seek(t, 5.0); t = 5.0; }}}, out, ref, tr, mix);
+		float step = maxStep(out, 0, out.size() / 2);
+		std::printf("  max step %.4f\n", step);
+		CHECK(step < CLICK, "click on seek (step %.4f)", step);
+	}
+
+	// 6. WAV decode round trip.
 	{
 		std::printf("[wav] decode round trip\n");
 		Sample groove = makeGroove(16.0);
@@ -230,7 +264,7 @@ int main() {
 		Sample* s = decodeWav(bytes.data(), bytes.size(), &err);
 		CHECK(s && s->frames == groove.frames && s->sampleRate == 44100.0 && s->data == groove.data, "round trip mismatch");
 
-		// 6. Listening demos: each effect on the groove, engaged on beat 9 for 2 beats.
+		// 7. Listening demos: each effect on the groove, engaged on beat 9 for 2 beats.
 		if (s) {
 			for (int fx = 0; fx < NUM_FX; fx++) {
 				std::vector<float> out, ref;

@@ -18,9 +18,12 @@ lane resumes exactly where it would have been had the effect never been engaged.
 
 ## Decisions made with the user
 - 6 lanes; a **dedicated gate jack + lit button per effect**; LEN knob per lane (1/64 to 2 bars), level, mute.
-- Per-lane CV jacks next to LEN/LVL/MUTE (38 HP kept by shrinking the lane screens to 32 mm). Patched LEN/LVL
+- Per-lane CV jacks next to LEN/LVL/MIX/MUTE. 42 HP (was 38; widened for MIX, lane screens stay 32 mm). Patched LEN/LVL
   CV **replaces** the knob (0-10 V across all lengths / 0-100%). MUTE gate mutes while high, OR-ed with the button.
-  New input IDs are appended after SEEK_TRIG_INPUT so old patches keep their cables.
+  New input IDs are appended after SEEK_TRIG_INPUT so old patches keep their cables (params likewise after SYNC_PARAM).
+- MIX per lane (default 1, CV replaces the knob): linear blend of the effected voice with the plain voice at t
+  (`Lane::render` mix arg; the dry path has its own seek crossfade). Linear on purpose: with no effect held
+  wet == dry, so MIX changes nothing; at 0 the lane is bit-identical to an untouched lane.
 - Stereo out per lane; if only L is patched, L carries the mono sum (L+R)/2.
 - WAV only. Transport: play/stop, reset, seek CV + trigger, position out; stops at end of the longest stem, or
   with **Loop** on (context menu, saved in the patch) wraps to 0 via `seekTo` (so held effects cancel like any seek).

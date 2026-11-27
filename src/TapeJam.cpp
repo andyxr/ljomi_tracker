@@ -46,6 +46,8 @@ struct TapeJam : Module {
 		BPM_PARAM,
 		OFFSET_PARAM,
 		SYNC_PARAM,
+		// Appended so saved patches keep their settings.
+		ENUMS(MIX_PARAM, NUM_LANES),
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -59,6 +61,7 @@ struct TapeJam : Module {
 		ENUMS(LEN_INPUT, NUM_LANES),
 		ENUMS(LEVEL_INPUT, NUM_LANES),
 		ENUMS(MUTE_INPUT, NUM_LANES),
+		ENUMS(MIX_INPUT, NUM_LANES),
 		INPUTS_LEN
 	};
 	enum OutputId {
@@ -102,6 +105,7 @@ struct TapeJam : Module {
 	float runGain = 0.f;
 	double speed = 1.0;
 	float laneGain[NUM_LANES] = {};
+	float laneMix[NUM_LANES];
 	Grid grid;
 
 	// Read by the UI (benign races on plain values).
@@ -124,6 +128,9 @@ struct TapeJam : Module {
 			configInput(LEN_INPUT + i, string::f("Lane %d effect length CV (0-10 V across all lengths, replaces the knob)", i + 1));
 			configInput(LEVEL_INPUT + i, string::f("Lane %d level CV (0-10 V, replaces the knob)", i + 1));
 			configInput(MUTE_INPUT + i, string::f("Lane %d mute gate (muted while high)", i + 1));
+			configParam(MIX_PARAM + i, 0.f, 1.f, 1.f, string::f("Lane %d effect mix (0 = plain stem only, 100 = effect only)", i + 1), "%", 0.f, 100.f);
+			configInput(MIX_INPUT + i, string::f("Lane %d effect mix CV (0-10 V, replaces the knob)", i + 1));
+			laneMix[i] = 1.f;
 			configOutput(L_OUTPUT + i, string::f("Lane %d left (mono sum if right is unpatched)", i + 1));
 			configOutput(R_OUTPUT + i, string::f("Lane %d right", i + 1));
 			current[i].store(nullptr);
@@ -281,8 +288,12 @@ struct TapeJam : Module {
 				bool high = gateTrig[i][f].isHigh() || params[FX_PARAM + k].getValue() > 0.f;
 				lanes[i].setGate(f, high, t, grid, lenBeats);
 			}
+			float mixTarget = inputs[MIX_INPUT + i].isConnected()
+				? clamp(inputs[MIX_INPUT + i].getVoltage() / 10.f, 0.f, 1.f)
+				: params[MIX_PARAM + i].getValue();
+			laneMix[i] += clamp(mixTarget - laneMix[i], -ramp, ramp);
 			float l, r;
-			lanes[i].render(smp[i], t, grid, dxf, l, r);
+			lanes[i].render(smp[i], t, grid, dxf, l, r, laneMix[i]);
 
 			muteTrig[i].process(inputs[MUTE_INPUT + i].getVoltage(), 0.1f, 1.f);
 			laneMuted[i] = params[MUTE_PARAM + i].getValue() > 0.5f || (inputs[MUTE_INPUT + i].isConnected() && muteTrig[i].isHigh());
@@ -626,6 +637,8 @@ struct PanelLabels : Widget {
 		label(args, LEN_CV_X, 12.5f, "CV", 9.f, dim);
 		label(args, LVL_X, 12.5f, "LVL", 9.f, dim);
 		label(args, LVL_CV_X, 12.5f, "CV", 9.f, dim);
+		label(args, MIX_X, 12.5f, "MIX", 9.f, dim);
+		label(args, MIX_CV_X, 12.5f, "CV", 9.f, dim);
 		label(args, MUTE_X, 12.5f, "MUTE", 9.f, dim);
 		label(args, MUTE_CV_X, 12.5f, "CV", 9.f, dim);
 		label(args, OUTL_X, 12.5f, "L", 9.f, dim);
@@ -682,9 +695,11 @@ struct TapeJamWidget : ModuleWidget {
 			}
 			addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(LEN_X, y)), module, TapeJam::LEN_PARAM + i));
 			addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(LVL_X, y)), module, TapeJam::LEVEL_PARAM + i));
+			addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(MIX_X, y)), module, TapeJam::MIX_PARAM + i));
 			addParam(createLightParamCentered<VCVLightLatch<MediumSimpleLight<RedLight>>>(mm2px(Vec(MUTE_X, y)), module, TapeJam::MUTE_PARAM + i, TapeJam::MUTE_LIGHT + i));
 			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(LEN_CV_X, y)), module, TapeJam::LEN_INPUT + i));
 			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(LVL_CV_X, y)), module, TapeJam::LEVEL_INPUT + i));
+			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(MIX_CV_X, y)), module, TapeJam::MIX_INPUT + i));
 			addInput(createInputCentered<PJ301MPort>(mm2px(Vec(MUTE_CV_X, y)), module, TapeJam::MUTE_INPUT + i));
 			addOutput(createOutputCentered<DarkPJ301MPort>(mm2px(Vec(OUTL_X, y)), module, TapeJam::L_OUTPUT + i));
 			addOutput(createOutputCentered<DarkPJ301MPort>(mm2px(Vec(OUTR_X, y)), module, TapeJam::R_OUTPUT + i));

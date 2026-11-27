@@ -171,6 +171,10 @@ struct Lane {
 	uint64_t counter = 0;
 	float xf = 1.f;          // crossfade progress prev -> cur
 	double lastReadPos = 0.0; // for display
+	// Dry path for the MIX control: the plain voice at t. It only needs its own crossfade
+	// on seeks (from the pre-seek spot, held in dryPrev).
+	Voice dryPrev;
+	float dryXf = 1.f;
 
 	int activeFx() const {
 		return cur.fx;
@@ -238,6 +242,9 @@ struct Lane {
 		cur = Voice();
 		curStamp = 0;
 		xf = 0.f;
+		dryPrev = Voice();
+		dryPrev.shift = oldT - newT;
+		dryXf = 0.f;
 	}
 
 	static inline void accumulate(const Sample* s, const Voice& v, double t, const Grid& g, float gain, float& L, float& R, double* posOut) {
@@ -257,7 +264,27 @@ struct Lane {
 	}
 
 	// dxf: crossfade increment per sample (1 / (fadeSeconds * sampleRate)).
-	void render(const Sample* s, double t, const Grid& g, float dxf, float& L, float& R) {
+	// mix: 1 = effected only, 0 = only the plain stem playing underneath; linear blend between.
+	void render(const Sample* s, double t, const Grid& g, float dxf, float& L, float& R, float mix = 1.f) {
+		const float wetXf = xf, dx = dryXf; // crossfade positions this sample renders at
+		renderWet(s, t, g, dxf, L, R);
+		dryXf = std::min(1.f, dryXf + dxf);
+		// No effect and no crossfade in progress: the wet path is the plain voice, nothing to blend.
+		if (mix >= 1.f || (cur.fx == FX_NONE && wetXf >= 1.f && dx >= 1.f) || !s || s->frames <= 0)
+			return;
+		float dL = 0.f, dR = 0.f;
+		if (dx < 1.f) {
+			accumulate(s, Voice(), t, g, std::sin(dx * 1.5707963f), dL, dR, nullptr);
+			accumulate(s, dryPrev, t, g, std::cos(dx * 1.5707963f), dL, dR, nullptr);
+		}
+		else {
+			accumulate(s, Voice(), t, g, 1.f, dL, dR, nullptr);
+		}
+		L = mix * L + (1.f - mix) * dL;
+		R = mix * R + (1.f - mix) * dR;
+	}
+
+	void renderWet(const Sample* s, double t, const Grid& g, float dxf, float& L, float& R) {
 		L = R = 0.f;
 		if (xf < 1.f) {
 			float a = std::sin(xf * 1.5707963f);

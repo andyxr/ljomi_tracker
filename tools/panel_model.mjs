@@ -49,6 +49,8 @@ for (let i = 0; i < NUM_LANES; i++) {
   c('jack', L.LEN_CV_X, y, n + ' LEN cv');
   c('knob', L.LVL_X, y, n + ' LVL');
   c('jack', L.LVL_CV_X, y, n + ' LVL cv');
+  c('knob', L.MIX_X, y, n + ' MIX');
+  c('jack', L.MIX_CV_X, y, n + ' MIX cv');
   c('button', L.MUTE_X, y, n + ' MUTE');
   c('jack', L.MUTE_CV_X, y, n + ' MUTE cv');
   c('jackOut', L.OUTL_X, y, n + ' L out');
@@ -78,7 +80,7 @@ export const labels = [
   { x: 5, y: 7.5, t: 'TAPE JAM', px: 16, col: CODE.title, a: 'start', font: 'display' },
   { x: 41, y: 7.5, t: 'flux stem player', px: 9, col: CODE.dim, a: 'start' },
   ...FX.map(([t, col], f) => ({ x: fxJackX(f) + L.FX_BTN_DX / 2, y: 12.5, t, px: 9, col })),
-  ...[['LEN', L.LEN_X], ['CV', L.LEN_CV_X], ['LVL', L.LVL_X], ['CV', L.LVL_CV_X], ['MUTE', L.MUTE_X], ['CV', L.MUTE_CV_X], ['L', L.OUTL_X], ['R', L.OUTR_X]]
+  ...[['LEN', L.LEN_X], ['CV', L.LEN_CV_X], ['LVL', L.LVL_X], ['CV', L.LVL_CV_X], ['MIX', L.MIX_X], ['CV', L.MIX_CV_X], ['MUTE', L.MUTE_X], ['CV', L.MUTE_CV_X], ['L', L.OUTL_X], ['R', L.OUTR_X]]
     .map(([t, x]) => ({ x, y: 12.5, t, px: 9, col: CODE.dim })),
   ...Array.from({ length: NUM_LANES }, (_, i) => ({ x: 4, y: laneY(i), t: String(i + 1), px: 11, col: CODE.dim })),
   ...[['CLOCK', L.CLOCK_X], ['BPM', L.BPM_X], ['OFFS', L.OFFSET_X], ['SYNC', L.SYNC_X],

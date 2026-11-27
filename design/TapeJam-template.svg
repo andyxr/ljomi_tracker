@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="193.04mm" height="128.5mm" viewBox="0 0 193.04 128.5">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="213.36mm" height="128.5mm" viewBox="0 0 213.36 128.5">
 <sodipodi:namedview id="namedview" inkscape:document-units="mm" pagecolor="#505050" inkscape:pagecheckerboard="false"/>
 <g id="artwork" inkscape:groupmode="layer" inkscape:label="Artwork">
-<rect x="0" y="0" width="193.04" height="128.5" fill="#1b1d22"/>
-<rect x="0" y="0" width="193.04" height="15" fill="#14161a"/>
-<rect x="0" y="0" width="193.04" height="1.2" fill="#e0703a"/>
-<rect x="0" y="15" width="193.04" height="14" fill="#23262d"/>
+<rect x="0" y="0" width="213.36" height="128.5" fill="#1b1d22"/>
+<rect x="0" y="0" width="213.36" height="15" fill="#14161a"/>
+<rect x="0" y="0" width="213.36" height="1.2" fill="#e0703a"/>
+<rect x="0" y="15" width="213.36" height="14" fill="#23262d"/>
 <rect x="43" y="16" width="60" height="12" rx="1.5" fill="#2b2f37"/>
-<rect x="165.5" y="16" width="23" height="12" rx="1.5" fill="#33302b"/>
-<rect x="0" y="30" width="193.04" height="14" fill="#1f2127"/>
+<rect x="185.5" y="16" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="30" width="213.36" height="14" fill="#1f2127"/>
 <rect x="43" y="31" width="60" height="12" rx="1.5" fill="#2b2f37"/>
-<rect x="165.5" y="31" width="23" height="12" rx="1.5" fill="#33302b"/>
-<rect x="0" y="45" width="193.04" height="14" fill="#23262d"/>
+<rect x="185.5" y="31" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="45" width="213.36" height="14" fill="#23262d"/>
 <rect x="43" y="46" width="60" height="12" rx="1.5" fill="#2b2f37"/>
-<rect x="165.5" y="46" width="23" height="12" rx="1.5" fill="#33302b"/>
-<rect x="0" y="60" width="193.04" height="14" fill="#1f2127"/>
+<rect x="185.5" y="46" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="60" width="213.36" height="14" fill="#1f2127"/>
 <rect x="43" y="61" width="60" height="12" rx="1.5" fill="#2b2f37"/>
-<rect x="165.5" y="61" width="23" height="12" rx="1.5" fill="#33302b"/>
-<rect x="0" y="75" width="193.04" height="14" fill="#23262d"/>
+<rect x="185.5" y="61" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="75" width="213.36" height="14" fill="#23262d"/>
 <rect x="43" y="76" width="60" height="12" rx="1.5" fill="#2b2f37"/>
-<rect x="165.5" y="76" width="23" height="12" rx="1.5" fill="#33302b"/>
-<rect x="0" y="90" width="193.04" height="14" fill="#1f2127"/>
+<rect x="185.5" y="76" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="90" width="213.36" height="14" fill="#1f2127"/>
 <rect x="43" y="91" width="60" height="12" rx="1.5" fill="#2b2f37"/>
-<rect x="165.5" y="91" width="23" height="12" rx="1.5" fill="#33302b"/>
-<rect x="0" y="106.5" width="193.04" height="22" fill="#14161a"/>
-<rect x="0" y="106.5" width="193.04" height="0.4" fill="#e0703a"/>
+<rect x="185.5" y="91" width="23" height="12" rx="1.5" fill="#33302b"/>
+<rect x="0" y="106.5" width="213.36" height="22" fill="#14161a"/>
+<rect x="0" y="106.5" width="213.36" height="0.4" fill="#e0703a"/>
 <rect x="116.5" y="114.5" width="11" height="11" rx="1.5" fill="#33302b"/>
 </g>
 <g id="guides" inkscape:groupmode="layer" inkscape:label="GUIDES - hide before saving to res" sodipodi:insensitive="true">
@@ -67,12 +67,16 @@
 <line x1="182.88" y1="0" x2="182.88" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
 <line x1="187.96" y1="0" x2="187.96" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
 <line x1="193.04" y1="0" x2="193.04" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
-<rect x="0.3" y="15" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
-<rect x="0.3" y="30" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
-<rect x="0.3" y="45" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
-<rect x="0.3" y="60" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
-<rect x="0.3" y="75" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
-<rect x="0.3" y="90" width="192.44" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<line x1="198.12" y1="0" x2="198.12" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="203.2" y1="0" x2="203.2" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="208.28" y1="0" x2="208.28" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<line x1="213.36" y1="0" x2="213.36" y2="128.5" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.15"/>
+<rect x="0.3" y="15" width="212.76" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="30" width="212.76" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="45" width="212.76" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="60" width="212.76" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="75" width="212.76" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
+<rect x="0.3" y="90" width="212.76" height="14" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.2" stroke-dasharray="1,1"/>
 <rect x="8" y="16.5" width="32" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
 <text x="24" y="22.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 1 display (opaque, drawn by code)</text>
 <rect x="8" y="31.5" width="32" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
@@ -85,8 +89,8 @@
 <text x="24" y="82.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 5 display (opaque, drawn by code)</text>
 <rect x="8" y="91.5" width="32" height="11" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
 <text x="24" y="97.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">lane 6 display (opaque, drawn by code)</text>
-<rect x="131" y="108" width="58" height="14" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
-<text x="160" y="115.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">transport display (opaque, drawn by code)</text>
+<rect x="131" y="108" width="78" height="14" fill="#ff3030" fill-opacity="0.18" stroke="#ff3030" stroke-width="0.25"/>
+<text x="170" y="115.6" font-family="monospace" font-size="1.8" fill="#ff8080" text-anchor="middle">transport display (opaque, drawn by code)</text>
 <circle cx="48" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="48" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M47,22H49M48,21V23" stroke="#3d8bff" stroke-width="0.15"/>
@@ -135,22 +139,30 @@
 <circle cx="139.5" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M138.5,22H140.5M139.5,21V23" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="139.5" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 LVL cv</text>
-<circle cx="149.5" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="149.5" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
-<path d="M148.5,22H150.5M149.5,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
-<text x="149.5" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 MUTE</text>
-<circle cx="159" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="159" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M158,22H160M159,21V23" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="159" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 MUTE cv</text>
-<circle cx="171" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="171" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M170,22H172M171,21V23" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="171" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 L out</text>
-<circle cx="183" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="183" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M182,22H184M183,21V23" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="183" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 R out</text>
+<circle cx="150" cy="22" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="150" cy="22" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M149,22H151M150,21V23" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="150" y="28.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">1 MIX</text>
+<circle cx="159.5" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="159.5" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M158.5,22H160.5M159.5,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="159.5" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 MIX cv</text>
+<circle cx="169.5" cy="22" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="169.5" cy="22" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M168.5,22H170.5M169.5,21V23" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="169.5" y="27.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">1 MUTE</text>
+<circle cx="179" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="179" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M178,22H180M179,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="179" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 MUTE cv</text>
+<circle cx="191" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="191" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M190,22H192M191,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="191" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 L out</text>
+<circle cx="203" cy="22" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="203" cy="22" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M202,22H204M203,21V23" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="203" y="28.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">1 R out</text>
 <circle cx="48" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="48" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M47,37H49M48,36V38" stroke="#3d8bff" stroke-width="0.15"/>
@@ -199,22 +211,30 @@
 <circle cx="139.5" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M138.5,37H140.5M139.5,36V38" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="139.5" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 LVL cv</text>
-<circle cx="149.5" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="149.5" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
-<path d="M148.5,37H150.5M149.5,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
-<text x="149.5" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 MUTE</text>
-<circle cx="159" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="159" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M158,37H160M159,36V38" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="159" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 MUTE cv</text>
-<circle cx="171" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="171" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M170,37H172M171,36V38" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="171" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 L out</text>
-<circle cx="183" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="183" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M182,37H184M183,36V38" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="183" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 R out</text>
+<circle cx="150" cy="37" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="150" cy="37" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M149,37H151M150,36V38" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="150" y="43.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">2 MIX</text>
+<circle cx="159.5" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="159.5" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M158.5,37H160.5M159.5,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="159.5" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 MIX cv</text>
+<circle cx="169.5" cy="37" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="169.5" cy="37" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M168.5,37H170.5M169.5,36V38" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="169.5" y="42.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">2 MUTE</text>
+<circle cx="179" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="179" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M178,37H180M179,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="179" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 MUTE cv</text>
+<circle cx="191" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="191" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M190,37H192M191,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="191" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 L out</text>
+<circle cx="203" cy="37" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="203" cy="37" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M202,37H204M203,36V38" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="203" y="43.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">2 R out</text>
 <circle cx="48" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="48" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M47,52H49M48,51V53" stroke="#3d8bff" stroke-width="0.15"/>
@@ -263,22 +283,30 @@
 <circle cx="139.5" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M138.5,52H140.5M139.5,51V53" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="139.5" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 LVL cv</text>
-<circle cx="149.5" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="149.5" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
-<path d="M148.5,52H150.5M149.5,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
-<text x="149.5" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 MUTE</text>
-<circle cx="159" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="159" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M158,52H160M159,51V53" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="159" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 MUTE cv</text>
-<circle cx="171" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="171" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M170,52H172M171,51V53" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="171" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 L out</text>
-<circle cx="183" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="183" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M182,52H184M183,51V53" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="183" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 R out</text>
+<circle cx="150" cy="52" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="150" cy="52" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M149,52H151M150,51V53" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="150" y="58.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">3 MIX</text>
+<circle cx="159.5" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="159.5" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M158.5,52H160.5M159.5,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="159.5" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 MIX cv</text>
+<circle cx="169.5" cy="52" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="169.5" cy="52" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M168.5,52H170.5M169.5,51V53" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="169.5" y="57.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">3 MUTE</text>
+<circle cx="179" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="179" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M178,52H180M179,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="179" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 MUTE cv</text>
+<circle cx="191" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="191" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M190,52H192M191,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="191" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 L out</text>
+<circle cx="203" cy="52" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="203" cy="52" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M202,52H204M203,51V53" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="203" y="58.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">3 R out</text>
 <circle cx="48" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="48" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M47,67H49M48,66V68" stroke="#3d8bff" stroke-width="0.15"/>
@@ -327,22 +355,30 @@
 <circle cx="139.5" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M138.5,67H140.5M139.5,66V68" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="139.5" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 LVL cv</text>
-<circle cx="149.5" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="149.5" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
-<path d="M148.5,67H150.5M149.5,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
-<text x="149.5" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 MUTE</text>
-<circle cx="159" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="159" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M158,67H160M159,66V68" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="159" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 MUTE cv</text>
-<circle cx="171" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="171" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M170,67H172M171,66V68" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="171" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 L out</text>
-<circle cx="183" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="183" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M182,67H184M183,66V68" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="183" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 R out</text>
+<circle cx="150" cy="67" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="150" cy="67" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M149,67H151M150,66V68" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="150" y="73.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">4 MIX</text>
+<circle cx="159.5" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="159.5" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M158.5,67H160.5M159.5,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="159.5" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 MIX cv</text>
+<circle cx="169.5" cy="67" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="169.5" cy="67" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M168.5,67H170.5M169.5,66V68" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="169.5" y="72.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">4 MUTE</text>
+<circle cx="179" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="179" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M178,67H180M179,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="179" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 MUTE cv</text>
+<circle cx="191" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="191" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M190,67H192M191,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="191" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 L out</text>
+<circle cx="203" cy="67" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="203" cy="67" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M202,67H204M203,66V68" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="203" y="73.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">4 R out</text>
 <circle cx="48" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="48" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M47,82H49M48,81V83" stroke="#3d8bff" stroke-width="0.15"/>
@@ -391,22 +427,30 @@
 <circle cx="139.5" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M138.5,82H140.5M139.5,81V83" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="139.5" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 LVL cv</text>
-<circle cx="149.5" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="149.5" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
-<path d="M148.5,82H150.5M149.5,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
-<text x="149.5" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 MUTE</text>
-<circle cx="159" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="159" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M158,82H160M159,81V83" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="159" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 MUTE cv</text>
-<circle cx="171" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="171" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M170,82H172M171,81V83" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="171" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 L out</text>
-<circle cx="183" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="183" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M182,82H184M183,81V83" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="183" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 R out</text>
+<circle cx="150" cy="82" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="150" cy="82" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M149,82H151M150,81V83" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="150" y="88.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">5 MIX</text>
+<circle cx="159.5" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="159.5" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M158.5,82H160.5M159.5,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="159.5" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 MIX cv</text>
+<circle cx="169.5" cy="82" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="169.5" cy="82" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M168.5,82H170.5M169.5,81V83" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="169.5" y="87.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">5 MUTE</text>
+<circle cx="179" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="179" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M178,82H180M179,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="179" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 MUTE cv</text>
+<circle cx="191" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="191" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M190,82H192M191,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="191" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 L out</text>
+<circle cx="203" cy="82" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="203" cy="82" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M202,82H204M203,81V83" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="203" y="88.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">5 R out</text>
 <circle cx="48" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="48" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M47,97H49M48,96V98" stroke="#3d8bff" stroke-width="0.15"/>
@@ -455,22 +499,30 @@
 <circle cx="139.5" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M138.5,97H140.5M139.5,96V98" stroke="#3d8bff" stroke-width="0.15"/>
 <text x="139.5" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 LVL cv</text>
-<circle cx="149.5" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="149.5" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
-<path d="M148.5,97H150.5M149.5,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
-<text x="149.5" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 MUTE</text>
-<circle cx="159" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="159" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M158,97H160M159,96V98" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="159" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 MUTE cv</text>
-<circle cx="171" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="171" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M170,97H172M171,96V98" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="171" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 L out</text>
-<circle cx="183" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
-<circle cx="183" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
-<path d="M182,97H184M183,96V98" stroke="#3d8bff" stroke-width="0.15"/>
-<text x="183" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 R out</text>
+<circle cx="150" cy="97" r="4.84" fill="none" stroke="#3ecf6a" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="150" cy="97" r="3.84" fill="#3ecf6a" fill-opacity="0.25" stroke="#3ecf6a" stroke-width="0.25"/>
+<path d="M149,97H151M150,96V98" stroke="#3ecf6a" stroke-width="0.15"/>
+<text x="150" y="103.04" font-family="monospace" font-size="1.4" fill="#3ecf6a" text-anchor="middle">6 MIX</text>
+<circle cx="159.5" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="159.5" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M158.5,97H160.5M159.5,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="159.5" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 MIX cv</text>
+<circle cx="169.5" cy="97" r="4.05" fill="none" stroke="#ff8a3d" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="169.5" cy="97" r="3.05" fill="#ff8a3d" fill-opacity="0.25" stroke="#ff8a3d" stroke-width="0.25"/>
+<path d="M168.5,97H170.5M169.5,96V98" stroke="#ff8a3d" stroke-width="0.15"/>
+<text x="169.5" y="102.25" font-family="monospace" font-size="1.4" fill="#ff8a3d" text-anchor="middle">6 MUTE</text>
+<circle cx="179" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="179" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M178,97H180M179,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="179" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 MUTE cv</text>
+<circle cx="191" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="191" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M190,97H192M191,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="191" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 L out</text>
+<circle cx="203" cy="97" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
+<circle cx="203" cy="97" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
+<path d="M202,97H204M203,96V98" stroke="#3d8bff" stroke-width="0.15"/>
+<text x="203" y="103.215" font-family="monospace" font-size="1.4" fill="#3d8bff" text-anchor="middle">6 R out</text>
 <circle cx="10" cy="120" r="5.015" fill="none" stroke="#3d8bff" stroke-opacity="0.5" stroke-width="0.15" stroke-dasharray="0.6,0.6"/>
 <circle cx="10" cy="120" r="4.015" fill="#3d8bff" fill-opacity="0.25" stroke="#3d8bff" stroke-width="0.25"/>
 <path d="M9,120H11M10,119V121" stroke="#3d8bff" stroke-width="0.15"/>
@@ -525,10 +577,12 @@
 <text x="119.5" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">CV</text>
 <text x="130" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">LVL</text>
 <text x="139.5" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">CV</text>
-<text x="149.5" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">MUTE</text>
-<text x="159" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">CV</text>
-<text x="171" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">L</text>
-<text x="183" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">R</text>
+<text x="150" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">MIX</text>
+<text x="159.5" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">CV</text>
+<text x="169.5" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">MUTE</text>
+<text x="179" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">CV</text>
+<text x="191" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">L</text>
+<text x="203" y="13.567" font-family="monospace" font-size="3.048" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">R</text>
 <text x="4" y="23.304" font-family="monospace" font-size="3.725" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">1</text>
 <text x="4" y="38.304" font-family="monospace" font-size="3.725" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">2</text>
 <text x="4" y="53.304" font-family="monospace" font-size="3.725" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">3</text>
@@ -544,23 +598,23 @@
 <text x="100" y="111.948" font-family="monospace" font-size="2.709" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">SEEK</text>
 <text x="110" y="111.948" font-family="monospace" font-size="2.709" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">TRIG</text>
 <text x="122" y="111.948" font-family="monospace" font-size="2.709" fill="#ffffff" fill-opacity="0.45" text-anchor="middle">POS</text>
-<text x="199.04" y="6" font-family="sans-serif" font-size="4" fill="#e0703a">TAPE JAM panel template</text>
-<text x="199.04" y="12" font-family="sans-serif" font-size="2.6" fill="#cccccc">Page: 193.04 x 128.5 mm (38 HP). Draw in the "Artwork" layer.</text>
-<text x="199.04" y="15.9" font-family="sans-serif" font-size="2.6" fill="#cccccc">This GUIDES layer is locked; hide or delete it before saving to res/TapeJam.svg.</text>
-<circle cx="200.54" cy="20.900000000000002" r="1.4" fill="#3d8bff" fill-opacity="0.4" stroke="#3d8bff" stroke-width="0.25"/>
-<text x="203.04" y="21.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">jack (PJ301M) 8.0 mm (dashed ring = 1 mm clearance)</text>
-<circle cx="200.54" cy="24.900000000000002" r="1.4" fill="#3ecf6a" fill-opacity="0.4" stroke="#3ecf6a" stroke-width="0.25"/>
-<text x="203.04" y="25.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">knob (RoundSmallBlack) 7.7 mm (dashed ring = 1 mm clearance)</text>
-<circle cx="200.54" cy="28.900000000000002" r="1.4" fill="#a6e35b" fill-opacity="0.4" stroke="#a6e35b" stroke-width="0.25"/>
-<text x="203.04" y="29.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">trimpot 6.0 mm (dashed ring = 1 mm clearance)</text>
-<circle cx="200.54" cy="32.9" r="1.4" fill="#ff8a3d" fill-opacity="0.4" stroke="#ff8a3d" stroke-width="0.25"/>
-<text x="203.04" y="33.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">lit button (VCVButton) 6.1 mm (dashed ring = 1 mm clearance)</text>
-<rect x="199.04" y="35.199999999999996" width="3" height="2.6" fill="#ff3030" fill-opacity="0.3" stroke="#ff3030" stroke-width="0.25"/>
-<text x="203.04" y="37.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">screen drawn by code: artwork under it is hidden</text>
-<text x="199.04" y="41.8" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Faint white text = labels currently drawn by code (runtimeLabels: true).</text>
-<text x="199.04" y="45.699999999999996" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Put your own lettering in the artwork as PATHS, then set runtimeLabels false.</text>
-<text x="199.04" y="51.599999999999994" font-family="sans-serif" font-size="2.6" fill="#ff8080">Rack cannot render: &lt;text>, embedded images, CSS &lt;style>, filters/blur,</text>
-<text x="199.04" y="55.49999999999999" font-family="sans-serif" font-size="2.6" fill="#ff8080">masks, clip paths, &lt;use>/symbols, patterns. Check with: node tools/check_panel.mjs</text>
-<text x="199.04" y="59.39999999999999" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Moving a control? Edit tools/layout.json and re-run tools/gen_panel.mjs.</text>
+<text x="219.36" y="6" font-family="sans-serif" font-size="4" fill="#e0703a">TAPE JAM panel template</text>
+<text x="219.36" y="12" font-family="sans-serif" font-size="2.6" fill="#cccccc">Page: 213.36 x 128.5 mm (42 HP). Draw in the "Artwork" layer.</text>
+<text x="219.36" y="15.9" font-family="sans-serif" font-size="2.6" fill="#cccccc">This GUIDES layer is locked; hide or delete it before saving to res/TapeJam.svg.</text>
+<circle cx="220.86" cy="20.900000000000002" r="1.4" fill="#3d8bff" fill-opacity="0.4" stroke="#3d8bff" stroke-width="0.25"/>
+<text x="223.36" y="21.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">jack (PJ301M) 8.0 mm (dashed ring = 1 mm clearance)</text>
+<circle cx="220.86" cy="24.900000000000002" r="1.4" fill="#3ecf6a" fill-opacity="0.4" stroke="#3ecf6a" stroke-width="0.25"/>
+<text x="223.36" y="25.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">knob (RoundSmallBlack) 7.7 mm (dashed ring = 1 mm clearance)</text>
+<circle cx="220.86" cy="28.900000000000002" r="1.4" fill="#a6e35b" fill-opacity="0.4" stroke="#a6e35b" stroke-width="0.25"/>
+<text x="223.36" y="29.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">trimpot 6.0 mm (dashed ring = 1 mm clearance)</text>
+<circle cx="220.86" cy="32.9" r="1.4" fill="#ff8a3d" fill-opacity="0.4" stroke="#ff8a3d" stroke-width="0.25"/>
+<text x="223.36" y="33.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">lit button (VCVButton) 6.1 mm (dashed ring = 1 mm clearance)</text>
+<rect x="219.36" y="35.199999999999996" width="3" height="2.6" fill="#ff3030" fill-opacity="0.3" stroke="#ff3030" stroke-width="0.25"/>
+<text x="223.36" y="37.8" font-family="sans-serif" font-size="2.6" fill="#cccccc">screen drawn by code: artwork under it is hidden</text>
+<text x="219.36" y="41.8" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Faint white text = labels currently drawn by code (runtimeLabels: true).</text>
+<text x="219.36" y="45.699999999999996" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Put your own lettering in the artwork as PATHS, then set runtimeLabels false.</text>
+<text x="219.36" y="51.599999999999994" font-family="sans-serif" font-size="2.6" fill="#ff8080">Rack cannot render: &lt;text>, embedded images, CSS &lt;style>, filters/blur,</text>
+<text x="219.36" y="55.49999999999999" font-family="sans-serif" font-size="2.6" fill="#ff8080">masks, clip paths, &lt;use>/symbols, patterns. Check with: node tools/check_panel.mjs</text>
+<text x="219.36" y="59.39999999999999" font-family="sans-serif" font-size="2.6" fill="#aaaaaa">Moving a control? Edit tools/layout.json and re-run tools/gen_panel.mjs.</text>
 </g>
 </svg>

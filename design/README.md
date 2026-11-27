@@ -1,7 +1,7 @@
 # Re-skinning Tape Jam
 
 1. Open `design/TapeJam-template.svg` in Inkscape (recommended), Illustrator or Figma.
-   Page: 193.04 x 128.5 mm (38 HP). In Inkscape the legend sits to the right of the page.
+   Page: 213.36 x 128.5 mm (42 HP). In Inkscape the legend sits to the right of the page.
 2. Draw in the **Artwork** layer. It starts with the stock artwork; delete or keep it.
    The **GUIDES** layer is locked and shows every control's footprint, a 1 mm keep-clear
    ring, the screens drawn by code (red: anything under them is hidden), and where the
