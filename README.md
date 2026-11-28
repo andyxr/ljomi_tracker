@@ -9,7 +9,7 @@ Each lane has four performance effects: **loop roll**, **reverse**, **tape stop*
 
 ## Quick start
 
-1. Add **Ljomi Tracker** to your patch.
+1. Add **Tracker** (under **Ljomi Systems** in the module browser) to your patch.
 2. Click a lane's screen and pick a WAV, or right-click the module and choose **Load folder of stems** to fill all six lanes at once.
 3. Patch the lane outputs into a mixer.
 4. Set **BPM** to the tempo of your stems.
